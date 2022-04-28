@@ -2,10 +2,10 @@
 
 /* reset */
 * {margin:0; padding:0; box-sizing:border-box !important;}
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, article, aside, hgroup, header, footer, figure, figcaption, nav, section { margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, article, aside, hgroup, header, footer, figure, figcaption, nav, section { margin:0; padding:0; border:0; /* font-size:100%; */ vertical-align:baseline; background:transparent; }
 article, aside, hgroup, header, footer, figure, figcaption, nav, section {display:block;}
-html, body {font-size:62.5%;font-family: 'Montserrat','NS'; font-weight: 200; color:#000; line-height:1.2; box-sizing:border-box; -webkit-text-size-adjust:none;overflow-x: hidden;}
-h1, h2, h3, h4, h5, h6 {font-weight:normal; line-height:1.2; word-break:keep-all;}
+html, body {/* font-size:62.5%; */font-family: 'GongGothic'; font-weight: 100; color:#000; line-height:1.2; box-sizing:border-box; -webkit-text-size-adjust:none;overflow-x: hidden;}
+h1, h2, h3, h4, h5, h6 {/* font-weight:normal; */ line-height:1.2; word-break:keep-all;}
 fieldset {border:none;}
 ol, li {list-style:none; zoom:1;}
 span, p, a, div, em {word-break:keep-all;}
