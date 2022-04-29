@@ -1,0 +1,11 @@
+* { margin: 0; padding: 0; text-decoration: none; list-style: none; }
+.before-load { }
+
+.section1 { background: #1cabe2; width: 100%; height: 300vh; }
+.section1 .section_wrap { max-width: 1700px; margin: auto; height: 100vh; position: relative; }
+.section1 .section_wrap .logo { display: inline-block; margin:50px 0 0 20px; }
+.section1 .section_wrap .container1 { position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin:auto; width:fit-content; height: fit-content; }
+.section1 .section_wrap .container1 .intro_quote { position:relative; }
+.section1 .section_wrap .container1 .intro_quote .quote, 
+.section1 .section_wrap .container1 .intro_quote i { display: inline-block; color: #fff; font-size: 40px; font-weight: 100; font-family: 'GongGothic'; }
+.section1 .section_wrap .container1 .intro_quote i { width: 4px; height: 35px; background-color: #fff; position:absolute; top:0; bottom:0; margin:auto 20px; transform: translateY(-1px); }
