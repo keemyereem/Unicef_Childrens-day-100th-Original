@@ -37,35 +37,32 @@ var section1 = {
 			let chars = word.split('');
 
 			chars.forEach(char => {    
-                tl.to(tmp, 0.1, { x: '+='+1, onComplete: () => {
-                        $(document).ready(function() {
-                             el.textContent += char;
-                        });
+                tl.to(tmp, 0.1, { x: '+='+1, onComplete: () => {                      
+                        el.textContent += char;
                     } 
                 });
                 
-                $(".section1").on('mousewheel',function(e){
+                $(".section").on('mousewheel',function(e){
                     var scTop = $(window).scrollTop();
                     var wheel = e.originalEvent.wheelDelta;
 
                     if(wheel < 0){
                         el.textContent = word;
-                        tl.pause();  
-
+                        tl.pause(); 
+                        
                     } else if (scTop == $(this).scrollTop()) {
                         el.textContent = '';
                         tl.restart();
 
                     }
-                }); 
-				
+                });       
 	        });
 
             tl.to(tmp, 1, {x: '+='+1});
                 chars.forEach(char => {
                     tl.to(tmp, 0.05, {  x: '+='+1, onComplete: () => {
-                        //el.textContent = el.textContent.slice(0, -1);   --> 타이핑 종료되면 전부 지우기
-                    } 
+                            //el.textContent = el.textContent.slice(0, -1);   --> 타이핑 종료되면 전부 지우기
+                        } 
                     });
                 })
             });
@@ -74,8 +71,27 @@ var section1 = {
 
 	/* SCROLL RESPONSIVE */
 	intro_fadeup:function() {
+        var controller = new ScrollMagic.Controller();
 
+		var sectionList = new TimelineMax();
+		sectionList
+			.staggerFrom('.second_quote', 0.5, { y: 30, autoAlpha: 0, ease: Power0.easeNone }, "0")
+			.staggerTo('.second_quote', 0.5, { y: 0, autoAlpha: 1, ease: Power0.easeNone }, "0")
 
+			.staggerFrom('.third_quote', 0.5, { y: 30, autoAlpha: 0, ease: Power0.easeNone }, "0")
+			.staggerTo('.third_quote', 0.5, { y: 0, autoAlpha: 1, ease: Power0.easeNone }, "0")
+
+			.staggerFrom('.third_quote i', 0.5, { scale: 0, ease: Power0.easeNone }, "-1")
+			.staggerTo('.third_quote i', 0.5, { scale: 1, ease: Power0.easeNone }, "-1")
+			
+		var ourScene = new ScrollMagic.Scene({
+				triggerElement: '',
+				triggerHook: 0.5,
+				duration: '200%'
+			})
+            .setPin('.section_wrap')
+			.setTween(sectionList)
+			.addTo(controller);
 	},
 
 
