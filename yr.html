@@ -4,44 +4,419 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>배너테스트</title>
-	<link rel="stylesheet" href="css/default.css">
+	<title>유니세프</title>
+	<!-- <link rel="stylesheet" href="css/common.css"> -->
 	<link rel="stylesheet" href="css/font.css">
+	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/gsap.css">
-	<script type="text/javascript" src="js/gsap.js"></script>
+	<link rel="stylesheet" href="css/slick.css">
+	<!-- <script type="text/javascript" src="js/gsap.js"></script> -->
 
 	<!-- GSAP Settings -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script> 
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/lib/slick.min.js"></script>
 
 <script>
 	$(document).ready( function() {
-        section1.init();
+		section1.init();
+		faqEvent.init();
+		s3Slider.init();
+		s5Slider.init();
     });
 </script>
 </head>
 <body class="before-load">
 
-	<section class="section section1">
+	<section class="section section0">
 		<div class="section_wrap">
 			<h1 class="logo"><img src="images/logo.png" alt="logo"></h1>
-			<div class="container1">
-				<div class="intro_quote">
-					<p class="quote" data-items="#어린이날100주년 #foreverychild #유니세프후원자라면"></p><i></i>
+			<div class="intro_quote" id="txt">
+				<p class="quote" data-items="#어린이날100주년 #foreverychild #유니세프후원자라면"></p><i></i>
+			</div>
+			<div class="second_quote" id="txt">
+				<p>모든 <span>어린이</span>가 <span>행복</span>한 <span>세상</span>을 위해</p>
+			</div>
+			<div class="third_quote" id="txt">
+				<p>우리도 한때 <span>어린이</span> 였어!</p><i></i>
+			</div>
+			<i class="scroll"></i>
+		</div>
+	</section>
+	<section class="section-tb section2">
+		<div class="center">
+			<div class="inner">
+				<div class="s_txt">
+					<h1 class="s_tit">
+						올해로 <span class="ylw">100번째</span><br> <span class="ylw">생일</span>을 맞은 5월 5일<br> <pan class="ylw">어린이날</pan>
+					</h1>
+					<p class="s_sub">
+						1923년 5월, 모든 어린이가 <span class="ylw">차별 없이 배우고</span><br> <span class="ylw">즐겁게 놀 권리</span>를 보장할 것을 선언하였습니다.
+					</p>
 				</div>
+				<div class="s_img"><img src="images/s2_img.png" alt="최고심 생일축하해 이모티콘"></div>
+			</div>
+		</div>
+	</section>
+	<section class="section-tb section3">
+		<div class="center">
+			<!-- <div class="inner"> -->
+				<div class="slider_container">
+					<div class="slider_wrap">
+						<div class="item item01">
+							<div class="slider_txt">
+								<div>
+									<div class="s_tag"><img src="images/s3_tit01.png" alt=""></div>
+									<h1 class="s_tit">
+										어린이들에게<br> <b>어떤 권리</b>가 있는지<br> 여러분은 알고 있나요?
+									</h1>
+									<p class="s_txt">
+										출처:  한국청소년정책연구원, 「2020 아동·청소년 권리에 관한 국제협약 이행 연구 -<br>
+										한국 아동·청소년 인권실태」 아동권리보장원, 「2021 아동권리 인식조사」
+									</p>
+								</div>
+							</div>
+							<div class="slider_img">
+								<img src="images/s3_slider01_img.png" alt="">
+							</div>
+						</div>
+						<div class="item item02">
+							<!-- <div class="inner"> -->
+								<div class="s_tag"><img src="images/s3_tit02.png" alt=""></div>
+								<h1 class="s_tit">아동권리에 대해 알고 있나요?</h1>
+								<div class="slider_img"><img src="images/s3_graph02.png" alt=""></div>
+								<div class="s_txt">
+									<p class="tit">
+										유엔아동권리협약 인지도
+									</p>
+									<p class="sub">
+										유엔 아동권리 협약에 대해 들어봤고, <b class="blue">어떤 것인지 알고 있다</b>고 <b class="blue">답변한 어린이</b>는 21.2%에 불과합니다.
+									</p>
+								</div>
+							<!-- </div> -->
+						</div>
+						<div class="item item03">
+							<div class="s_tag"><img src="images/s3_tit03.png" alt=""></div>
+							<h1 class="s_tit">아동권리에 대해 알고 있나요?</h1>
+							<div class="slider_img"><img src="images/s3_graph03.png" alt=""></div>
+							<div class="s_txt">
+								<p class="tit">
+									아동권리보장 체감도 <b class="ylw">71.08점</b>
+								</p>
+								<p class="sub">
+									작년 우리나라 어린이의 아동권리 보장 체감도는 71점이며,<br>
+									“우리나라 아동은 폭력과 학대를 당하지 않고 있다”는 문항에 대한 체감도가 가장 낮았습니다.
+								</p>
+							</div>
+						</div>
+						<div class="item item04">
+							<div class="s_tag"><img src="images/s3_tit04.png" alt=""></div>
+							<h1 class="s_tit">아동권리에 대해 알고 있나요?</h1>
+							<div class="slider_img"><img src="images/s3_graph04.png" alt=""></div>
+							<div class="s_txt">
+								<p class="tit">
+									차별경험
+								</p>
+								<p class="sub">
+									<b class="blue">어리다는 이유로 차별</b>을 받은 경험이<br> <b class="blue">32.6%</b>인 것으로 드러났습니다.
+								</p>
+							</div>
+						</div>
+						<div class="item item05">
+							<div class="s_tag"><img src="images/s3_tit05.png" alt=""></div>
+							<h1 class="s_tit">아동권리에 대해 알고 있나요?</h1>
+							<div class="slider_img"><img src="images/s3_graph05.png" alt=""></div>
+							<div class="s_txt">
+								<p class="tit">
+									여가와 놀이에 대한 권리
+								</p>
+								<p class="sub">
+									하루 평균 쉬고 노는 <b class="ylw">여가 시간이 3시간 미만</b>인<br>
+									어린이는 <b class="ylw">52.9%</b>로 나타났습니다.
+								</p>
+							</div>
+						</div>
+						<div class="item item06">
+							<div class="s_tag"><img src="images/s3_tit06.png" alt=""></div>
+							<h1 class="s_tit">아동권리에 대해 알고 있나요?</h1>
+							<div class="slider_img">
+								<!-- <img src="images/s3_graph06_bg.png" alt=""> -->
+								<div class="g_top">
+									<div class="left">아동</div>
+									<div class="right">(단위: %)</div>
+								</div>
+								<ul class="graph">
+									<li>
+										<div class="g_num">13</div>
+										<div class="g_figure"></div>
+										<div class="g_tit">놀 권리의<br> 중요성에 대한<br> 인식 부족</div>
+									</li>
+									<li>
+										<div class="g_num">27.4</div>
+										<div class="g_figure"></div>
+										<div class="g_tit">놀 시간의 부족</div>
+									</li>
+									<li>
+										<div class="g_num">6.3</div>
+										<div class="g_figure"></div>
+										<div class="g_tit">놀 공간의 부족</div>
+									</li>
+									<li>
+										<div class="g_num">4</div>
+										<div class="g_figure"></div>
+										<div class="g_tit">정보의 부족<br> (놀방법, 공간 등)</div>
+									</li>
+									<li>
+										<div class="g_num">47</div>
+										<div class="g_figure"></div>
+										<div class="g_tit">어른의 간섭</div>
+									</li>
+									<li>
+										<div class="g_num">2.3</div>
+										<div class="g_figure"></div>
+										<div class="g_tit">기타</div>
+									</li>
+								</ul>
+							</div>
+							<div class="s_txt">
+								<p class="tit">
+									아동이 놀 권리를 보장받는데 가장 방해가 되는 요인
+								</p>
+								<p class="sub">
+									‘어린이가 놀 권리를 보장받는데 가장 방해가 되는 요인’에서<br>
+									성인과 어린이 모두 <b class="blue">‘어른의 간섭</b>’을 <b class="blue">1순위</b>로 선택했습니다.
+								</p>
+							</div>
+						</div>
+					</div>
+					<ul class="slider_dots">
+						<li class="on"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div id="slide_paging" class="slide_paging mail_paging"></div>
+					<div class="slider_nav">
+						<div class="prev"></div>
+						<div class="next"></div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
 
+	<section class="section-tb section5">
+		<div class="center">
+			<div class="inner">
+				<h1 class="s_tit">
+					<span>유엔아동권리협약의 의미를 담은</span><br>
+					<span>움직이는 <span class="ylw">최고심 이모티콘</span>을 만나봐요</span>
+				</h1>
+				<div class="slider_container">
+					<div class="slider_wrap">
+						<div class="item">
+							<div class="basic"><img src="images/s5_slider01.png" alt=""></div>
+							<div class="hover">
+								<div class="hov_tit">24조. 영양과 건강, 환경</div>
+								<div class="hov_img"><img src="images/s5_hover_img01.png" alt=""></div>
+								<div class="hov_txt">
+									아동은 의료 서비스를 받으며 깨끗한<br>
+									식수를 마시고 건강에 좋은 음식을 먹으며<br>
+									쾌적한 환경에서 살아갈 권리가 있어요.                                        
+								</div>
+								<div class="hov_btn"><a href="javascript:;">아동 권리 지켜주기!</a></div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="basic"><img src="images/s5_slider02.png" alt=""></div>
+							<div class="hover">
+								<div class="hov_tit">13조. 표현의 자유</div>
+								<div class="hov_img"><img src="images/s5_hover_img02.png" alt=""></div>
+								<div class="hov_txt">
+									아동은 말이나 글, 그림 등<br>
+									다양한 방법으로 자신의 경험과 생각,<br>
+									느낌을 자유롭게 공유할 수 있어요.                                    
+								</div>
+								<div class="hov_btn"><a href="javascript:;">아동 권리 지켜주기!</a></div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="basic"><img src="images/s5_slider03.png" alt=""></div>
+							<div class="hover">
+								<div class="hov_tit">39. 몸과 마음의 회복</div>
+								<div class="hov_img"><img src="images/s5_hover_img03.png" alt=""></div>
+								<div class="hov_txt">
+									아동이 다쳤거나 방임, 학대, 전쟁으로<br>
+									피해를 입은 경우, 몸과 마음의 건강을<br>
+									회복해 일상으로 돌아갈 수 있게<br>
+									도와주어야 해요.                                        
+								</div>
+								<div class="hov_btn"><a href="javascript:;">아동 권리 지켜주기!</a></div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="basic"><img src="images/s5_slider04.png" alt=""></div>
+							<div class="hover">
+								<div class="hov_tit">28조. 교육</div>
+								<div class="hov_img"><img src="images/s5_hover_img04.png" alt=""></div>
+								<div class="hov_txt">
+									모든 아동은 교육받을 권리가 있어요.<br>
+									초등교육은 무료로 제공돼야 하며,<br>
+									모든 아동에게 중등 및<br>
+									고등 교육의 기회가 주어져야 해요.                                        
+								</div>
+								<div class="hov_btn"><a href="javascript:;">아동 권리 지켜주기!</a></div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="basic"><img src="images/s5_slider05.png" alt=""></div>
+							<div class="hover">
+								<div class="hov_tit">36조. 모든 착취로부터 보호</div>
+								<div class="hov_img"><img src="images/s5_hover_img05.png" alt=""></div>
+								<div class="hov_txt">
+									아동은 아동권리협약이 구체적으로<br>
+									다루지 않은 그 밖의 모든 형태의 착취로부터<br>
+									보호받을 권리가 있어요.                                       
+								</div>
+								<div class="hov_btn"><a href="javascript:;">아동 권리 지켜주기!</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="slider_nav">
+						<div class="prev"></div>
+						<div class="next"></div>
+					</div>
+					<div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+						<span class="slider__label sr-only">
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_pdf">유엔아동권리협약 PDF다운받기</a>
 			</div>
 		</div>
 	</section>
 
+	<section class="section-tb section6">
+		<div class="center">
+			<div class="inner">
+				<div class="s_tag">어린이날 100회 기념</div>
+				<h1 class="s_tit">
+					<span>유니세프 <b>한정 최고심</b></span><br>
+					<span><b>이모티콘</b> 증정 안내</span>
+				</h1>
+				<p class="s_txt01">전 세계 어린이들의 권리를 지키기 위해<br>
+					2022년 5월 5일 부터 한달간 5천원 이상 일시후원하시는 모든 정기후원자 분들께</p>
+				<p class="s_txt02"><span class="pink">한정판 최고심</span> 움직이는<span class="blue"> 이모티콘 쿠폰</span>을 드립니다!</p>
+				<div class="cont">
+					<ul>
+						<li><img src="images/s6_emo01.png" alt="한정판 최고심 이모티콘"></li>
+						<li><img src="images/s6_emo02.png" alt="한정판 최고심 이모티콘"></li>
+						<li><img src="images/s6_emo03.png" alt="한정판 최고심 이모티콘"></li>
+						<li><img src="images/s6_emo04.png" alt="한정판 최고심 이모티콘"></li>
+						<li><img src="images/s6_emo05.png" alt="한정판 최고심 이모티콘"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-tb section7">
+		<div class="center">
+			<div class="inner">
+				<h1 class="s_tit">카카오톡 댓글 이벤트!</h1>
+				<p class="s_txt">유니세프 후원자라면 <b>카카오톡 채널</b>을 추가하고 <b>최고심 이모티콘 댓글</b>을 달아주세요!</p>
+				<div class="cont">
+					<div class="character"><img src="images/s7_character.png" alt="최고심 이모티콘"></div>
+					<div class="left">
+						<p class="cont_tit">참여방법</p>
+						<div class="bot">
+							<ul>
+								<li>
+									<div class="icon"><img src="images/s7_icon01.png" alt="참여방법 아이콘"></div>
+									<div class="txt">
+										<div class="num">01</div>
+										<p>1만원 이상 일시후원하고<br>
+											<b>이모티콘 쿠폰 2장 받기</b></p>
+									</div>
+								</li>
+								<li>
+									<div class="icon"><img src="images/s7_icon02.png" alt="참여방법 아이콘"></div>
+									<div class="txt">
+										<div class="num">02</div>
+										<p>하나는 <b>내가 쓰고</b><br>
+											다른 하나는 <b>친구 선물 주기</b></p>
+									</div>
+								</li>
+								<li>
+									<div class="icon"><img src="images/s7_icon03.png" alt="참여방법 아이콘"></div>
+									<div class="txt">
+										<div class="num">03</div>
+										<p><b>유니세프 후원자</b> 알림톡<br>
+											채널에서 친구와 함께<br>
+											이모티콘으로 <b>댓글달기</b>
+											<a href="javascript:;" class="go_channel">카카오톡 채널 방문하기</a>
+										</p>
+									</div>
+								</li>
+							</ul>
+							<div class="phone"><img src="images/s7_phone.png" alt="핸드폰 이미지"></div>
+						</div>
+					</div>
+					<div class="right">
+						<p class="cont_tit">참여선물</p>
+						<div class="gift"><img src="images/s7_gift.png" alt="랜덤박스 이미지"></div>
+						<span>유니세프 랜덤박스</span>
+						<p class="txt">
+							*랜덤박스는 유니세프 굿즈로 구성되어 있습니다.<br>
+							*댓글 이벤트에 참여해 주신 분들 중 추첨을 통해 랜덤박스를 드립니다.<br>
+							*6월 중 유니세프 후원자 알림톡 채널을 통해 당첨자를 발표할 예정입니다.                                                                
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section-tb section8">
+		<div class="center">
+			<div class="inner">
+				<h1 class="s_tit">FAQ</h1>
+				<ul class="faq_tab">
+					<li class="on">참여방법</li>
+					<li>이모티콘 관련</li>
+				</ul>
+				<div class="content">
+					<div class="faq_cont faq_cont01 on">
+						<div class="que"><p>정기후원자만 참여 가능한가요?</p></div>
+						<div class="ans"><p>본 캠페인은 유니세프 정기후원자만 참여 가능하며, 정기후원자가 아닐 경우 키트가 발송되지 않습니다.</p></div>
+						<div class="que"><p>이모티콘은 어떻게 받을 수 있나요?</p></div>
+						<div class="ans"><p>5천원 일시후원으로 본 캠페인에 참여해 주시면 감사선물로 드리는 카카오톡 이모티콘을 받을 수 있습니다. 단, 준비된 수량이 소진되면 캠페인이 종료됩니다.</p></div>
+					</div>
+					<div class="faq_cont faq_cont02">
+						<div class="que"><p>이모티콘은 언제 받을 수 있나요?</p></div>
+						<div class="ans"><p>5월 말 이모티콘 등록 쿠폰을 카카오톡알림톡으로 발송드릴 예정입니다. 마이페이지에 등록된 휴대폰 번호를 꼭 확인해 주시기 바랍니다.</p></div>
+						<div class="que"><p>이모티콘 쿠폰은 몇 장까지 받을 수 있나요?</p></div>
+						<div class="ans"><p>5천원당 쿠폰 1장이 지급되며, 1만원 이상 후원하신 분은 2장 지급됩니다. 후원자 1분당 최대 2장까지 가능합니다.</p></div>
+						<div class="que"><p>이모티콘 사용기간이 궁금해요!</p></div>
+						<div class="ans"><p>쿠폰 등록 후 30일 사용 가능합니다.</p></div>
+						<div class="que"><p>쿠폰 유효기간은 언제까지인가요?</p></div>
+						<div class="ans"><p>쿠폰 등록 유효기간은 2022년 8월 25일까지 입니다.</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		2020, 1분코딩
+	</footer>
 
 
-	<script>
 
-	</script>
+
 </body>
 </html>
