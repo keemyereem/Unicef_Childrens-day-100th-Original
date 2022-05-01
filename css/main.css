@@ -1,18 +1,24 @@
 @charset 'utf-8';
 
-
+body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;}
 .container {
 	/* iPhone 가로 스크롤 방지 */
 	overflow-x: hidden;
 }
 
 /* ----------------------------------------------- */
-.section0 {display: none;opacity: 0;}
+/* .section0 {display: none;opacity: 0;} */
 
 .scroll-section {border: 2px solid blue;}
 .section-tb {width: 100%;height: 100vh;display: table;}
 .section-tb .center {position:relative; left:0; top:0; z-index:1; width:100%;height: 100%; overflow:hidden;display: table-cell;vertical-align: middle;}
 .section-tb .inner {max-width: 1440px;text-align: center;margin: 0 auto;}
+
+.section1 {border: 2px solid #000; width: 100%;height: 200vh; background: #1cabe2;position: relative;}
+.section1 .s1_bg {position: relative;width: 100%;height: 100vh;background: url(../images/s1_bg.png) no-repeat 50% 0;background-size: contain;z-index: 100;}
+.section1 .s_tit {position: absolute;top: 650px;left: 258px; font-size: 60px;font-weight: 300;-webkit-text-stroke: 3px #000;color: #fff;}
+.section1 .s_tit .blue {color: #1cabe2;}
+
 
 .section2 {background: #1cabe2;}
 .section2 .inner {display: flex;border: 1px solid #000;}
