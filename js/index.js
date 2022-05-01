@@ -1,5 +1,5 @@
 
-var section1 = {
+var section0 = {
     init:function(){
         this.scroll_detector();
         this.intro_quote();
@@ -84,7 +84,8 @@ var section1 = {
 
 			.staggerFrom('.third_quote i', 0.5, { scale: 0, ease: Power0.easeNone }, "-1")
 			.staggerTo('.third_quote i', 0.5, { scale: 1, ease: Power0.easeNone }, "-1")
-			
+
+
 		var ourScene = new ScrollMagic.Scene({
 				triggerElement: '',
 				triggerHook: 0.5,
@@ -238,6 +239,33 @@ var s3Slider = {
             }
         })
     }
+};
+
+var section1 = {
+    init:function(){
+        this.scaleTween();
+    },
+    scaleTween:function(){
+        // Init ScrollMagic
+        var controller = new ScrollMagic.Controller();
+        
+        
+            
+        // Scene intro - pin the intro section
+        
+        var tween = TweenMax.to(".s1_bg", 1, {scale:.8, opacity:1, ease:Linear.easeNone});
+        
+        var pinSceneIntro = new ScrollMagic.Scene({
+            triggerElement: '.section1',
+            triggerHook: 0,
+            duration: '100%'		
+        })
+        .setTween(tween)
+        .setPin('.section1 .s1_bg')
+        .addIndicators()
+        .addTo(controller)
+        ;
+    },
 };
 
     
