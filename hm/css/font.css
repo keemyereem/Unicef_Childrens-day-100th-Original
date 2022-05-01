@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* FONT */
+/* 이사만루체 */
+@font-face {
+    font-family: 'GongGothic';
+    font-weight: 100;
+    src: local(※),
+    url(../font/esamanru-Light.otf) format('opentype'),
+    url(../font/esamanru-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'GongGothic';
+    font-weight: 300;
+    src: local(※),
+    url(../font/esamanru-Medium.otf) format('opentype'),
+    url(../font/esamanru-Medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'GongGothic';
+    font-weight: 400;
+    src: local(※),
+    url(../font/esamanru-Bold.otf) format('opentype'),
+    url(../font/esamanru-Bold.ttf) format('truetype');
+} 
+
+
+/* 교보핸드라이팅 2019 */
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+    src: local(※),
+    url(../font/NotoSansCJKkr-Regular.otf) format('opentype'),
+    url(../font/NotoSansCJKkr-Regular.ttf) format('truetype');
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
