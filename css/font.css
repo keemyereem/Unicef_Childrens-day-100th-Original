@@ -1,7 +1,27 @@
 @charset "utf-8";
 
 /* FONT */
+
 /* 이사만루체 */
+/* @font-face {
+    font-family: 'GGongGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GongGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GongGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicBold.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} */
+
 @font-face {
     font-family: 'GongGothic';
     font-weight: 100;
@@ -26,14 +46,24 @@
 
 
 /* 교보핸드라이팅 2019 */
+@font-face {
+    font-family: 'Kyobo';
+    font-weight: 100;
+    src: local(※),
+    url(../font/Kyobo-Handwriting-2019.otf) format('opentype'),
+    url(../font/Kyobo-Handwriting-2019.ttf) format('truetype');
+}
+
+/* Noto Sans KR */
 
 @font-face {
     font-family: 'Noto Sans KR';
-    font-weight: 400;
+    font-weight: normal;
     src: local(※),
     url(../font/NotoSansCJKkr-Regular.otf) format('opentype'),
     url(../font/NotoSansCJKkr-Regular.ttf) format('truetype');
 }
 
+/* Poppins */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');

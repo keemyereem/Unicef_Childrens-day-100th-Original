@@ -3,19 +3,25 @@ var section1 = {
         this.scroll_detector();
         this.intro_quote();
         this.intro_fadeup();
+        this.second_scene();
+        this.third_scene();
     },
 
     scroll_detector:function(){
+
         
-        $("").on('mousewheel',function(e){
+
+        $(".section").on('mousewheel',function(e){
             var wheel = e.originalEvent.wheelDelta;
             
-            //스크롤값을 가져온다.
             if(wheel>0){
                 //스크롤 올릴때
             } else {
                 //스크롤 내릴때
             }
+
+            
+            
         });
     },
 
@@ -42,7 +48,7 @@ var section1 = {
                     } 
                 });
                 
-                $(".section").on('mousewheel',function(e){
+                $("section").on('mousewheel',function(e){
                     var scTop = $(window).scrollTop();
                     var wheel = e.originalEvent.wheelDelta;
 
@@ -73,27 +79,82 @@ var section1 = {
 	intro_fadeup:function() {
         var controller = new ScrollMagic.Controller();
 
-		var sectionList = new TimelineMax();
-		sectionList
-			.staggerFrom('.second_quote', 0.5, { y: 30, autoAlpha: 0, ease: Power0.easeNone }, "0")
-			.staggerTo('.second_quote', 0.5, { y: 0, autoAlpha: 1, ease: Power0.easeNone }, "0")
+		var scene0_sc = new TimelineMax();
+		scene0_sc
+        
+			.staggerFrom('.scene0 .second_quote', 1, { y: 30, autoAlpha: 0 })
+			.staggerTo('.scene0 .second_quote', 1, { y: 0, autoAlpha: 1 })
 
-			.staggerFrom('.third_quote', 0.5, { y: 30, autoAlpha: 0, ease: Power0.easeNone }, "0")
-			.staggerTo('.third_quote', 0.5, { y: 0, autoAlpha: 1, ease: Power0.easeNone }, "0")
+			.staggerFrom('.scene0 .third_quote', 1, { y: 30, autoAlpha: 0 })
+			.staggerTo('.scene0 .third_quote', 1, { y: 0, autoAlpha: 1 })
 
-			.staggerFrom('.third_quote i', 0.5, { scale: 0, ease: Power0.easeNone }, "-1")
-			.staggerTo('.third_quote i', 0.5, { scale: 1, ease: Power0.easeNone }, "-1")
-			
-		var ourScene = new ScrollMagic.Scene({
+			.staggerFrom('.scene0 .third_quote i', 1, { scale: 0 })
+			.staggerTo('.scene0 .third_quote i', 1, { scale: 1 })
+
+		var scene0 = new ScrollMagic.Scene({
 				triggerElement: '',
-				triggerHook: 0.5,
-				duration: '200%'
+                triggerHook: 0.5,
+				duration: "400%"
 			})
-            .setPin('.section_wrap')
-			.setTween(sectionList)
-			.addTo(controller);
+            .setPin(".scene0")
+			.setTween(scene0_sc)
+			.addTo(controller)
+            //.addIndicators({name: "1 (duration: 300%)"})
 	},
 
+    second_scene:function() {
+        var controller = new ScrollMagic.Controller();
+        
+        var scene1_sc = new TimelineMax();
+        scene1_sc
 
+            .staggerFrom('.scene1 .fourth_quote', 1, { y: 30, autoAlpha: 0 })
+			.staggerTo('.scene1 .fourth_quote', 1, { y: 0, autoAlpha: 1 })
+
+			.staggerFrom('.scene1 .fifth_quote', 1, { y: 30, autoAlpha: 0 })
+			.staggerTo('.scene1 .fifth_quote', 1, { y: 0, autoAlpha: 1 })
+
+            .staggerFrom('.scene1_container', 1, { y: 0, autoAlpha: 1 })
+			.staggerTo('.scene1_container', 1, { y: 30, autoAlpha: 0 })
+
+            .staggerFrom('.scene1_bg', 1, {scale: 1 })
+            .staggerTo('.scene1_bg', 1, { scale: .8 })
+
+            .staggerFrom('.scene1_bg', 2, { y: 0 })
+            .staggerTo('.scene1_bg', 2, { y: '-100%' })
+
+            .staggerFrom('.scroll', 1, { autoAlpha: 1 })
+			.staggerTo('.scroll', 1, { autoAlpha: 0 })
+
+        var scene1 = new ScrollMagic.Scene({
+				triggerElement: '.scene1',
+                triggerHook: 0,
+				duration: "400%"
+			})
+            .setPin(".scene1")
+            .setClassToggle(".scene1", 'active')
+			.setTween(scene1_sc)
+			.addTo(controller)
+            //.addIndicators({name: "2 (duration: 300%)"})
+            
+    },
+
+    third_scene:function() {
+        var controller = new ScrollMagic.Controller();
+
+        var scene2_sc = new TimelineMax();
+        scene2_sc     
+            .staggerFrom('.scene2', 0, {y: 0 })
+            .staggerTo('.scene2', 0, { y: "-100%" }) 
+
+        var scene2 = new ScrollMagic.Scene({
+				triggerElement: '.scene1',
+                triggerHook: 0.8,
+				duration: "300%"
+			})
+			.setTween(scene2_sc)
+			.addTo(controller)
+            .addIndicators({name: "3 (duration: 400%)"})
+    },
 }
 
