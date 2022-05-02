@@ -37,15 +37,6 @@ var section1 = {
 			ease: Linear.easeNone
 		});
 
-        let el2 = document.getElementsByClassName('quote')[1];
-        let items2 = el2.dataset.items.split(', ');
-
-        TweenMax.to(el2.nextElementSibling, 0.6, {
-			opacity: 0, 
-			repeat: -1, 
-			ease: Linear.easeNone
-		});
-
 		let tl = new TimelineMax({repeat: 0});	// 반복 설정
 		let tmp = { x: 0 };
 
@@ -83,40 +74,6 @@ var section1 = {
             })
         });
     
-        
-        items2.forEach((word, idx) => {
-            let chars = word.split('');
-
-            chars.forEach(char => {    
-                tl.to(tmp, 0.1, { x: '+='+1, onComplete: () => {                      
-                        el2.textContent += char;
-                    } 
-                });
-                
-                $(".section4").on('mousewheel',function(e){
-                    var scTop = $(window).scrollTop();
-                    var wheel = e.originalEvent.wheelDelta;
-
-                    if(wheel < 0){
-                        el2.textContent = word;
-                        tl.pause(); 
-                        
-                    } else if (scTop == $(this).scrollTop() || scTop > $(this).scrollTop()) {
-                        el2.textContent = '';
-                        tl.restart();
-
-                    }
-                });       
-            });
-
-            tl.to(tmp, 1, {x: '+='+1});
-            chars.forEach(char => {
-                tl.to(tmp, 0.05, {  x: '+='+1, onComplete: () => {
-                        //el.textContent = el.textContent.slice(0, -1);   --> 타이핑 종료되면 전부 지우기
-                    } 
-                });
-            })
-        });
             
 	},
 
@@ -142,7 +99,7 @@ var section1 = {
 				duration: "400%"
 			})
             .setPin(".scene0")
-			.setTween(scene0_sc)
+			.setTween(scene0_sc)    // 트윈 주석 지우면 자동재생
 			.addTo(controller)
             //.addIndicators({name: "1 (duration: 300%)"})
 	},
@@ -285,17 +242,74 @@ var s5Slider = {
     clickEvent:function(){
         $(".section5 .slider_wrap .item").click(function() {
             console.log($(this).index());
-            $(this).toggleClass('on');
+            //$(this).toggleClass('on');
+            $(this).find('.basic').fadeToggle(300)
+            $(this).find('.hover').fadeToggle(300)
         });
 
           
     },
 };
+
+var section4 = {
+    init:function(){
+        this.sec4_quote();
+    },
+
+    sec4_quote:function() {
+        let el = document.getElementsByClassName('quote2')[0];
+		let items = el.dataset.items.split(', ');
+
+		TweenMax.to(el.nextElementSibling, 0.6, {
+			opacity: 0, 
+			repeat: -1, 
+			ease: Linear.easeNone
+		});
+
+		let tl = new TimelineMax({repeat: 0});	// 반복 설정
+		let tmp = { x: 0 };
+
+		items.forEach((word, idx) => {
+			let chars = word.split('');
+
+			chars.forEach(char => {    
+                tl.to(tmp, 0.1, { x: '+='+1, onComplete: () => {                      
+                        el.textContent += char;
+                    } 
+                });
+                
+                $(".section4").on('mousewheel',function(e){
+                    var scTop = $(window).scrollTop();
+                    var wheel = e.originalEvent.wheelDelta;
+
+                    if(wheel < 0){
+                        el.textContent = word;
+                        tl.pause(); 
+                        
+                    } else {
+                        el.textContent = '';
+                        tl.restart();
+
+                    }
+                });       
+	        });
+
+            tl.to(tmp, 1, {x: '+='+1});
+            chars.forEach(char => {
+                tl.to(tmp, 0.05, {  x: '+='+1, onComplete: () => {
+                        //el.textContent = el.textContent.slice(0, -1);   --> 타이핑 종료되면 전부 지우기
+                    } 
+                });
+            })
+        });
+    },
+
+};
+
+
 var s3Slider = {
     init:function(){
         this.s3Slider();
-
-
     },
 
     s3Slider:function(){
@@ -427,34 +441,6 @@ var s3Slider = {
     }
 };
 
-// var section1 = {
-//     init:function(){
-//         this.scaleTween();
-//     },
-//     scaleTween:function(){
-//         // Init ScrollMagic
-//         var controller = new ScrollMagic.Controller();
-        
-        
-            
-//         // Scene intro - pin the intro section
-        
-//         var tween = TweenMax.to(".s1_bg", 1, {scale:.8, opacity:1, ease:Linear.easeNone});
-        
-//         var pinSceneIntro = new ScrollMagic.Scene({
-//             triggerElement: '.section1',
-//             triggerHook: 0,
-//             duration: '100%'		
-//         })
-//         .setTween(tween)
-//         .setPin('.section1 .s1_bg')
-//         .addIndicators()
-//         .addTo(controller)
-//         ;
-//     },
-// };
-
-    
 var scrollFadeUp = {
     init:function(){
         this.scrollEvent();
@@ -495,7 +481,7 @@ var scrollFadeUp = {
               })
               .setClassToggle("#animate1", "visible")
               .addTo(controller)
-              .addIndicators();
+              //.addIndicators();
             
             var revealElements = document.getElementsByClassName("animation2");
             for (var i=0; i<revealElements.length; i++) {
