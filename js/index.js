@@ -3,16 +3,16 @@ var section1 = {
     init:function(){
         this.scroll_detector();
         this.intro_quote();
-        this.intro_fadeup();
-        this.second_scene();
-        this.third_scene();
+        //this.intro_fadeup();
+        //this.second_scene();
+        //this.third_scene();
     },
 
     scroll_detector:function(){
 
         
 
-        $(".section").on('mousewheel',function(e){
+        $(".section0").on('mousewheel',function(e){
             var wheel = e.originalEvent.wheelDelta;
             
             if(wheel>0){
@@ -49,7 +49,7 @@ var section1 = {
                     } 
                 });
                 
-                $(".section").on('mousewheel',function(e){
+                $(".section0").on('mousewheel',function(e){
                     var scTop = $(window).scrollTop();
                     var wheel = e.originalEvent.wheelDelta;
 
@@ -78,6 +78,7 @@ var section1 = {
 	},
 
 	/* SCROLL RESPONSIVE */
+    /*
 	intro_fadeup:function() {
         var controller = new ScrollMagic.Controller();
 
@@ -87,23 +88,23 @@ var section1 = {
 			.staggerFrom('.scene0 .second_quote', 1, { y: 30, autoAlpha: 0 })
 			.staggerTo('.scene0 .second_quote', 1, { y: 0, autoAlpha: 1 })
 
-			.staggerFrom('.scene0 .third_quote', 1, { y: 30, autoAlpha: 0 })
-			.staggerTo('.scene0 .third_quote', 1, { y: 0, autoAlpha: 1 })
+			.staggerFrom('.scene0 .third_quote', .5, { y: 30, autoAlpha: 0 })
+			.staggerTo('.scene0 .third_quote', .5, { y: 0, autoAlpha: 1 })
 
-			.staggerFrom('.scene0 .third_quote i', 1, { scale: 0 })
-			.staggerTo('.scene0 .third_quote i', 1, { scale: 1 })
+			.staggerFrom('.scene0 .third_quote i', .5, { scale: 0 })
+			.staggerTo('.scene0 .third_quote i', .5, { scale: 1 })
 
 		var scene0 = new ScrollMagic.Scene({
 				triggerElement: '',
                 triggerHook: 0.5,
-				duration: "400%"
+				duration: "100%"
 			})
             .setPin(".scene0")
 			.setTween(scene0_sc)    // 트윈 주석 지우면 자동재생
 			.addTo(controller)
-            //.addIndicators({name: "1 (duration: 300%)"})
+            .addIndicators({name: "1 (duration: 300%)"})
 	},
-
+    
     second_scene:function() {
         var controller = new ScrollMagic.Controller();
         
@@ -140,6 +141,7 @@ var section1 = {
             //.addIndicators({name: "2 (duration: 300%)"})
             
     },
+    
 
     third_scene:function() {
         var controller = new ScrollMagic.Controller();
@@ -158,6 +160,7 @@ var section1 = {
 			.addTo(controller)
             //.addIndicators({name: "3 (duration: 400%)"})
     },
+    */
 }
 
 var faqEvent = {
@@ -224,10 +227,29 @@ var s5Slider = {
             cssEase: 'ease-out',
             centermode: true,
             // variableWidth: true,
-            adaptiveHeight: true,
+            // adaptiveHeight: true,
             prevArrow: $('.section5 .slider_nav .prev'), 
             nextArrow: $('.section5 .slider_nav .next'),
+            responsive: [
+                {
+                    breakpoint: 1200,   
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,               
+     
+                    }
+                },
+                {
+                    breakpoint: 767,   
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,                      
+                    }
+                }
+            ]
         })
+
+
         s5Progress(0);
     },
     hovEvent:function(){
@@ -356,14 +378,12 @@ var s3Slider = {
         $('.section3 .slider_wrap').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: false,
-            // autoplaySpeed: 5000,
-            infinite: false,
+            autoplay: true,
+            autoplaySpeed:4000,
+            infinite: true,
             swipeToSlide: true,
             cssEase: 'ease-out',
             centermode: true,
-            // variableWidth: true,
-            // adaptiveHeight: true,
             prevArrow: $('.section3 .slider_nav .prev'), 
             nextArrow: $('.section3 .slider_nav .next'),
             dotsClass: '.slider_dots ul',
@@ -375,7 +395,16 @@ var s3Slider = {
                 return '<div class="slider_wrap">' +
                     ' <div class="item"> 테스트 버튼'+(i+1)+ '</div>' +
                     '</div>'
-            }
+            },
+            responsive: [
+                {
+                    breakpoint: 767,   
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,                      
+                    }
+                }
+            ]
         }).on('afterChange', function(event, slick, currentSlide, nextSlide){ 
             console.log('slick index : ' + currentSlide);
             
@@ -498,5 +527,37 @@ var scrollFadeUp = {
             
           
           }())
+    },
+};
+
+var fullpage = {
+    init:function(){
+        this.createFullpage();
+    },
+    createFullpage:function(){
+        $('#fullpage').fullpage({
+            'verticalCentered': false,
+            'css3': true,
+            'navigationTooltips': ['fullPage.js', 'Powerful', 'Amazing', 'Simple'],
+    
+            'afterLoad': function(anchorLink, index){
+                if(index == 2){
+                    $('#iphone3, #iphone2, #iphone4').addClass('active');
+                }
+            },
+    
+            'onLeave': function(index, nextIndex, direction){
+                if (index == 3 && direction == 'down'){
+                    $('.fp-section').eq(index-1).removeClass('moveDown').addClass('moveUp');
+                }
+                else if(index == 3 && direction == 'up'){
+                    $('.fp-section').eq(index-1).removeClass('moveUp').addClass('moveDown');
+                }
+    
+                $('#staticImg').toggleClass('active', (index == 2 && direction == 'down' ) || (index == 4 && direction == 'up'));
+                $('#staticImg').toggleClass('moveDown', nextIndex == 4);
+                $('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
+            }
+        });
     },
 };

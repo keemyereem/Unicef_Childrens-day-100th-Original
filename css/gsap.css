@@ -1,64 +1,84 @@
 * { margin: 0; padding: 0; text-decoration: none; list-style: none; }
 html, body { height:100%; }
-body { width:100%; overflow:auto;}
+body { width:100%; background: #1cabe2; }
 
-/************************************** section1 **************************************/
-.section { background: #1cabe2; width: 100%; height: 1000vh; display: flex; justify-content: center; flex-direction: column; }
-.section_wrap { width: 100%; right: 0; left: 0; position:absolute; top: 0; font-family: 'GongGothic'; height:inherit; }
-.section .section_wrap .logo { display: inline-block; margin:auto; max-width: 1700px; width: 100%; padding: 50px 0 0 20px; position: fixed; left: 0; right: 0; z-index: 10; }
-.section .section_wrap .scroll { border: 2px solid #000; border-radius: 50px; position: fixed; bottom: 50px; left: 0; right: 0; margin: auto; width: 29px; height: 52px; z-index: 10; }
-.section .section_wrap .scroll:after { content: ''; width: 4px; height: 12px; background: #000; border-radius: 50px; position: absolute; top: 10px; left: 0; right: 0; margin: auto; animation: scroll 2s infinite; }
-
-/* scene0 */
-.section .section_wrap .scene0 { height: 100vh; background: #1cabe2; z-index: 1; } 
-.section .section_wrap .scene0 .intro_quote { text-align: center; padding-top: 295px; }
-.section .section_wrap .scene0 .intro_quote .quote, 
-.section .section_wrap .scene0 .intro_quote i { display: inline-block; color: #fff; font-size: 40px; font-weight: 100; }
-.section .section_wrap .scene0 .intro_quote i { width: 4px; height: 35px; background-color: #fff; margin:auto 20px; transform: translateY(5px); }
-.section .section_wrap .scene0 .second_quote { font-size: 63px; font-weight: 300; color: #fff; -webkit-text-stroke: #000 3px; margin:50px auto 0; width: fit-content; letter-spacing: -3px; }
-.section .section_wrap .scene0 .second_quote span:nth-of-type(1) { color: #ff8fa5; }
-.section .section_wrap .scene0 .second_quote span:nth-of-type(2) { color: #cb83ff; }
-.section .section_wrap .scene0 .second_quote span:nth-of-type(3) { color: #b0e0ff; }
-.section .section_wrap .scene0 .third_quote { font-size: 114px; font-weight: 300; color: #fff; -webkit-text-stroke: #000 3px; margin:45px auto 0; width: fit-content; letter-spacing: -3px; }
-.section .section_wrap .scene0 .third_quote span:nth-of-type(1) { color: #1cabe2; padding-left: 20px; }
-.section .section_wrap .scene0 .third_quote i { background: url(/images/highlight.png) 50% 50% no-repeat; width: 368px; height: 176px; position: absolute; top: -30px; right: 220px; z-index: -1; }
-
-@media screen and (max-width:767px){
-    .section .section_wrap .scene0 .intro_quote .quote, 
-    .section .section_wrap .scene0 .intro_quote i { font-size: 20px; }
-    .section .section_wrap .scene0 .second_quote {font-size: 31px;text-align: center;}
-    .section .section_wrap .scene0 .third_quote {font-size: 57px;}
-}
-
-/* scene1 */
-.section .section_wrap .scene1 { height: 100vh; } 
-.section .section_wrap .scene1_bg { height: 100vh; width: 100%; background: url(/images/s1_bg.png) 50% 50% no-repeat; background-size: cover; position:fixed; top:0; } 
-.section .section_wrap .scene1 .scene1_container { position:absolute; width: 100%; max-width: 1440px; left: 0; right: 0; margin: auto; bottom: 150px; }
-.section .section_wrap .scene1 .scene1_container .fourth_quote { font-size: 60px; font-weight: 400; color: #fff; -webkit-text-stroke: #000 3px; width: fit-content; letter-spacing: -3px; }
-.section .section_wrap .scene1 .scene1_container .fourth_quote span:nth-of-type(1) { color: #1cabe2; }
-.section .section_wrap .scene1 .scene1_container .fifth_quote { font-size: 60px; font-weight: 400; color: #fff; -webkit-text-stroke: #000 3px; width: fit-content; letter-spacing: -3px; }
-.section .section_wrap .scene1 .scene1_container .fifth_quote span:nth-of-type(1) { color: #1cabe2; }
-.section .section_wrap .scene2 { height: 100vh; } 
-
-@media screen and (max-width:767px){
-    .section .section_wrap .scene1_bg {width: 100vw;}
-    .section .section_wrap .scene1 .scene1_container .fourth_quote {font-size: 35px;padding-left: 20px;}
-    .section .section_wrap .scene1 .scene1_container .fifth_quote {font-size: 35px;padding-left: 20px;}
-}
-
+.logo { display:block; width: 126px; height: 68px; margin: 50px 0 0 20px; position: absolute; }
+.scroll { position: fixed; left:0; right:0; bottom:68px; top:auto; margin:auto; z-index: 10; width: fit-content; }
+.scroll p { padding-bottom: 10px; }
+.scroll i { border: 2px solid #000; border-radius: 50px; width: 29px; height: 52px; display: block; position: relative; margin:auto; }
+.scroll i:after { content: ''; width: 4px; height: 12px; background: #000; border-radius: 50px; position: absolute; top: 10px; left: 0; right: 0; margin: auto; animation: scroll 2s infinite; }
+.scroll i:before { content:url(/images/scrollDown_arrow.png); position:absolute; bottom: -30px; left:calc(50% - 1px); transform:translateX(-50%); animation:scroll_arrow 1s infinite alternate}
 /* ani */
+@keyframes scroll_mob {
+    0% { top: 5px; opacity: 1; }
+    90% { top: 20px; opacity: 1; }
+    100% { top: 20px; opacity: 0; }
+}
+
 @keyframes scroll {
-    0% {
-        top: 10px;
-        opacity: 1;
-    }
-    90% {
-        top: 30px;
-        opacity: 1;
-    }
+    0% { top: 10px; opacity: 1; }
+    90% { top: 30px; opacity: 1; }
     100% {
         top: 30px;
         opacity: 0;
     }
 }
+@keyframes scroll_arrow{
+	0%{ bottom: -30px; }
+	100%{ bottom: -40px; }
+}
+
+/************************************** section1 **************************************/
+.section0 { width: 100%; display: flex; justify-content: center; flex-direction: column; }
+.section0 .section_wrap { max-width: 1700px; width: 100%; right: 0; left: 0; position:absolute; top: 0; margin: auto; font-family: 'GongGothic'; height:100%; }
+
+/* scene0 */
+.section0 .section_wrap .scene0 { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
+.section0 .section_wrap .scene0 .intro_quote { text-align: center; /*padding-top: 295px;*/ }
+.section0 .section_wrap .scene0 .intro_quote .quote, 
+.section0 .section_wrap .scene0 .intro_quote i { display: inline-block; color: #fff; font-size: 40px; font-weight: 100; }
+.section0 .section_wrap .scene0 .intro_quote i { width: 4px; height: 35px; background-color: #fff; margin:auto 20px; transform: translateY(5px); }
+.section0 .section_wrap .scene0 .second_quote { font-size: 63px; font-weight: 300; color: #fff; -webkit-text-stroke: #000 3px; margin:50px auto 0; width: fit-content; letter-spacing: -3px; }
+.section0 .section_wrap .scene0 .second_quote span:nth-of-type(1) { color: #ff8fa5; }
+.section0 .section_wrap .scene0 .second_quote span:nth-of-type(2) { color: #cb83ff; }
+.section0 .section_wrap .scene0 .second_quote span:nth-of-type(3) { color: #b0e0ff; }
+.section0 .section_wrap .scene0 .third_quote { font-size: 114px; font-weight: 300; color: #fff; -webkit-text-stroke: #000 3px; margin:40px auto 0; width: fit-content; letter-spacing: -5px; word-break: keep-all; }
+.section0 .section_wrap .scene0 .third_quote span { z-index: 1; position:relative; }
+.section0 .section_wrap .scene0 .third_quote span b { color: #1cabe2; padding-left: 20px;}
+.section0 .section_wrap .scene0 .third_quote span i { background: url(/images/highlight.png) 50% 50% no-repeat; width: 368px; height: 176px; position: absolute; top: -25px; left: -3px; z-index: -1; }
+
+@media screen and (max-width:767px){
+    .section0 { height: 980vh; }
+    .section0 .section_wrap .logo { padding: 26px 0 0 20px; margin:0; max-width: 100%; width:63px; height: 34px; }
+    .section0 .section_wrap .logo img { width:100%; }
+    .section0 .section_wrap .scene0 .intro_quote { padding: 158px 20px 0 20px; }
+    .section0 .section_wrap .scene0 .intro_quote .quote { font-size: 20px; line-height: 1.5; display: inline; word-break: keep-all; }
+    .section0 .section_wrap .scene0 .intro_quote i { width: 2px; height: 17.5px; background-color: #fff; margin:auto 10.5px; transform: translateY(5px); position: absolute; }
+    .section0 .section_wrap .scene0 .second_quote {font-size: 31px;text-align: center; line-height: 1.3; -webkit-text-stroke: #000 1.5px; margin:30px auto 0; }
+    .section0 .section_wrap .scene0 .third_quote {font-size: 57px; margin:16.5px auto 0; -webkit-text-stroke: #000 1.5px; text-align: center; line-height: 1.2; }
+    .section0 .section_wrap .scene0 .third_quote span b { padding-left: 0px; }
+    .section0 .section_wrap .scene0 .third_quote span i { width: 184px; height: 87.5px; background-size:99%; top:auto; right:auto; bottom: -9px; left: -17px; }
+}
+
+/************************************** section2 **************************************/
+.section2 { width: 100%; display: flex; justify-content: center; flex-direction: column; }
+.section2 .section_wrap { max-width: 1700px; width: 100%; right: 0; left: 0; position:absolute; top: 0; margin: auto; font-family: 'GongGothic'; height:100%; }
+
+/* scene1 */
+.section2 .section_wrap .scene1 { width:100%; height: 100%; display: flex; justify-content: center; align-items: center; } 
+.section2 .section_wrap .scene1_bg { height: 100vh; width: 100%; background: url(/images/s1_bg.png) 50% 50% no-repeat; background-size: cover; position:fixed; top:0; } 
+.section2 .section_wrap .scene1 .fourth_quote { font-size: 60px; font-weight: 400; margin:auto; color: #fff; -webkit-text-stroke: #000 3px; width: fit-content; letter-spacing: -3px; }
+.section2 .section_wrap .scene1 .fourth_quote span:nth-of-type(1) { color: #1cabe2; }
+.section2 .section_wrap .scene1 .fifth_quote { font-size: 60px; font-weight: 400; margin:auto; color: #fff; -webkit-text-stroke: #000 3px; width: fit-content; letter-spacing: -3px; }
+.section2 .section_wrap .scene1  .fifth_quote span:nth-of-type(1) { color: #1cabe2; }
+
+
+@media screen and (max-width:767px){
+    .section0 .section_wrap .scene1 .fourth_quote {font-size: 35px;padding:0 20px; -webkit-text-stroke: #000 1.5px; }
+    .section0 .section_wrap .scene1 .fifth_quote {font-size: 35px;padding:0 20px; -webkit-text-stroke: #000 1.5px; }
+    .section0 .section_wrap .scroll { border: 1px solid #000; bottom: 50px; width: 20px; height: 32px; }
+    .section0 .section_wrap .scroll:after { width: 2px; height: 6px; top: 5px; animation: scroll_mob 2s infinite; }
+}
+
+
 
