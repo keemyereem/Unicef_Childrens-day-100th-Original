@@ -63,6 +63,13 @@
     url(../font/NotoSansCJKkr-Regular.otf) format('opentype'),
     url(../font/NotoSansCJKkr-Regular.ttf) format('truetype');
 }
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    src: local(※),
+    url(../font/NotoSansCJKkr-Medium.otf) format('opentype'),
+    url(../font/NotoSansCJKkr-Medium.ttf) format('truetype');
+}
 
 /* Poppins */
 

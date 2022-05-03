@@ -2,30 +2,28 @@
 html, body { height:100%; }
 body { width:100%; background: #1cabe2; }
 
-.logo { display:block; width: 126px; height: 68px; margin: 50px 0 0 20px; position: absolute; }
-.scroll { position: fixed; left:0; right:0; bottom:68px; top:auto; margin:auto; z-index: 10; width: fit-content; }
-.scroll p { padding-bottom: 10px; }
+.logo { max-width: 1700px; right: 0; left: 0; margin:auto; position: fixed; z-index: 10; }
+.logo img { margin: 50px 0 0 20px; }
+.scroll { position: fixed; left:0; right:0; bottom:50px; top:auto; margin:auto; z-index: 10; width: fit-content; }
+.scroll p { padding-bottom: 10px; font-family: 'Noto Sans KR'; font-weight: 300; font-size: 14px; }
 .scroll i { border: 2px solid #000; border-radius: 50px; width: 29px; height: 52px; display: block; position: relative; margin:auto; }
 .scroll i:after { content: ''; width: 4px; height: 12px; background: #000; border-radius: 50px; position: absolute; top: 10px; left: 0; right: 0; margin: auto; animation: scroll 2s infinite; }
-.scroll i:before { content:url(/images/scrollDown_arrow.png); position:absolute; bottom: -30px; left:calc(50% - 1px); transform:translateX(-50%); animation:scroll_arrow 1s infinite alternate}
+.scroll i:before { content:url(/images/scrollDown_arrow.png); position:absolute; bottom: -28px; left:calc(50% - 1px); transform:translateX(-50%); animation:scroll_arrow .7s infinite alternate}
+
 /* ani */
 @keyframes scroll_mob {
     0% { top: 5px; opacity: 1; }
     90% { top: 20px; opacity: 1; }
     100% { top: 20px; opacity: 0; }
 }
-
 @keyframes scroll {
     0% { top: 10px; opacity: 1; }
     90% { top: 30px; opacity: 1; }
-    100% {
-        top: 30px;
-        opacity: 0;
-    }
+    100% { top: 30px; opacity: 0; }
 }
 @keyframes scroll_arrow{
-	0%{ bottom: -30px; }
-	100%{ bottom: -40px; }
+	0%{ bottom: -28px; }
+	100%{ bottom: -33px; }
 }
 
 /************************************** section1 **************************************/
@@ -46,6 +44,10 @@ body { width:100%; background: #1cabe2; }
 .section0 .section_wrap .scene0 .third_quote span { z-index: 1; position:relative; }
 .section0 .section_wrap .scene0 .third_quote span b { color: #1cabe2; padding-left: 20px;}
 .section0 .section_wrap .scene0 .third_quote span i { background: url(/images/highlight.png) 50% 50% no-repeat; width: 368px; height: 176px; position: absolute; top: -25px; left: -3px; z-index: -1; }
+
+@media screen and (min-width:768px) and (max-width:1280px){
+	
+}
 
 @media screen and (max-width:767px){
     .section0 { height: 980vh; }
@@ -68,10 +70,10 @@ body { width:100%; background: #1cabe2; }
 .section2 .section_wrap .scene1 { width:100%; height: 100%; display: flex; justify-content: center; align-items: center; } 
 .section2 .section_wrap .scene1_bg { height: 100vh; width: 100%; background: url(/images/s1_bg.png) 50% 50% no-repeat; background-size: cover; position:fixed; top:0; } 
 .section2 .section_wrap .scene1 .fourth_quote { font-size: 60px; font-weight: 400; margin:auto; color: #fff; -webkit-text-stroke: #000 3px; width: fit-content; letter-spacing: -3px; }
-.section2 .section_wrap .scene1 .fourth_quote span:nth-of-type(1) { color: #1cabe2; }
+.section2 .section_wrap .scene1 .fourth_quote span:nth-of-type(1) { color: #ffee62; }
 .section2 .section_wrap .scene1 .fifth_quote { font-size: 60px; font-weight: 400; margin:auto; color: #fff; -webkit-text-stroke: #000 3px; width: fit-content; letter-spacing: -3px; }
-.section2 .section_wrap .scene1  .fifth_quote span:nth-of-type(1) { color: #1cabe2; }
-
+.section2 .section_wrap .scene1 .fifth_quote span:nth-of-type(1) { color: #ffee62; }
+.section2 .section_wrap .scene1 .btn {width: 360px;height: 70px;line-height: 70px;font-size: 24px;font-weight: 100;color: #000;text-align: center;letter-spacing: -.6px;display: block;background: #ffee62;margin: 110px auto 0;}
 
 @media screen and (max-width:767px){
     .section0 .section_wrap .scene1 .fourth_quote {font-size: 35px;padding:0 20px; -webkit-text-stroke: #000 1.5px; }
