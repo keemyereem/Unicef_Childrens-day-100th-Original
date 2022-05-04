@@ -455,7 +455,9 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 
 .section6 .inner {padding: 0 130px;box-sizing: border-box;}
 .section6 .cont {position: relative;width: 100%;height: auto;background: #fff;border: 3px solid #000;border-radius: 30px;padding: 40px 140px;box-sizing: border-box;margin-top: 40px; box-shadow: 6px 7px 10px 0px rgba(0, 0, 0, 0.18);}
-.section6 .cont_tit {font-size: 22px;-webkit-text-stroke: 1px #000;color: #fff;margin-bottom: 26px; font-weight: 300;}
+.section6 .cont_tit:first-of-type { margin-bottom: 6px; }
+.section6 .cont > h2 { font-size: 18px; font-weight: 100; color:#000; margin-bottom: 35px; }
+.section6 .cont_tit {font-size: 22px;-webkit-text-stroke: 1px #000;color: #fff;margin-bottom: 10px; font-weight: 300;}
 .section6 .cont_tit:before,
 .section6 .cont_tit:after {content:'';display: inline-block;width: 10px;height: 10px;border: 3px solid #000;background: #fff;border-radius: 50%;box-sizing: border-box;}
 .section6 .cont_tit:before {margin-right: 19px; margin-bottom: 8px; }
@@ -518,9 +520,11 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 .section7 h1.s_tit {font-size: 60px;font-weight: 300;-webkit-text-stroke: 3px #000;color: #fff;margin-bottom: 30px;}
 .section7 p.s_txt {font-size: 25px;font-weight: 100;}
 .section7 p.s_txt > b {font-weight: 300;}
-.section7 .cont {display: flex;box-sizing: border-box;/* width: 100%; */height: 410px;margin-top: 205px;padding: 50px 55px 0 55px; border: 3px solid #000;background: #fff;border-radius: 20px;position: relative;box-shadow: 6px 7px 10px 0px rgba(0, 0, 0, 0.18);}
+.section7 .cont {display: flex;box-sizing: border-box;/* width: 100%; */height: 500px;margin-top: 205px;padding: 50px 55px 0 55px; border: 3px solid #000;background: #fff;border-radius: 20px;position: relative;box-shadow: 6px 7px 10px 0px rgba(0, 0, 0, 0.18);}
 .section7 .cont .character {position: absolute;left: 50%;transform: translateX(-50%);top: -166px;}
 .section7 .cont .character img:last-of-type {display: none;}
+.section7 .cont .cont_tit:first-of-type { margin-bottom: 6px; }
+.section7 .cont .left > h2 { font-size: 18px; font-weight: 100; color:#000; margin-bottom: 35px; }
 .section7 .cont .cont_tit {text-align: center;font-size: 22px;font-weight: 300;-webkit-text-stroke: 2px #000;color: #fff;letter-spacing: -.55px;}
 .section7 .cont .cont_tit img:last-of-type {display: none;}
 .section7 .cont .cont_tit:before,
@@ -542,6 +546,7 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 .section7 .cont .right {flex-basis: 500px;position: relative;}
 .section7 .cont .right:before {display: inline-block;content:'';width: 1px;height: 100%;border-left: 1px dashed #999;position: absolute;left: 0;top: 0;}
 .section7 .cont .right .gift {margin: 20px 0;}
+.section7 .cont .right .gift span { position: absolute; }
 .section7 .cont .right span {font-size: 18px;}
 .section7 .cont .right .txt {padding: 25px 0 0 60px;font-size: 13px;color: #858585;font-family: 'Noto Sans KR';font-weight: normal;line-height: 1.46;text-align: left;letter-spacing: -0.325px;}
 
