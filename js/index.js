@@ -581,17 +581,19 @@ var fullpage = {
                     $('.section' + i +'.active .aos-init').addClass('aos-animate'); // all magic goes here - when page is active, then all elements with AOS will start animate
                 }
 
-                if(index == 6){
-                    if($(window).width() < 768){
-                        $(this).addClass('fp-auto-height');
-                    }
-                }
+                // if(index == 6){
+                //     if($(window).width() < 768){
+                //         $(this).addClass('fp-auto-height');
+                //     }
+                // }
                 /* 인포그래픽 섹션 도달 후 오토플레이 시작 */
                 if (index == 4) {
                     $('.section3 .slider_wrap').slick("slickPlay")
+                    $('.floating_widget').fadeOut();
                 } else {
-                    $('.section3 .slider_wrap').slick('slickGoTo', 0)
-                    $('.section3 .slider_wrap').slick('slickPause')
+                    $('.section3 .slider_wrap').slick('slickGoTo', 0);
+                    $('.section3 .slider_wrap').slick('slickPause');
+                    $('.floating_widget').fadeIn();
                 }
 
             },

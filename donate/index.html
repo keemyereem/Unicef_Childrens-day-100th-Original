@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유니세프 후원하기</title>
+    <link rel="stylesheet" href="../css/font.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(document).ready( function() {
+            AOS.init();
+        });
+    </script>
+    <style>
+        * {margin: 0;padding: 0;box-sizing: border-box;}
+        body {font-family: 'GongGothic';font-weight: 100;}
+        .br_m {display: none;}
+        #support_wrap {width: 100%;height: 100vh;background: #1cabe2;position: relative;}
+        #support_wrap .inner {max-width: 1700px;margin: 0 auto;}
+        #support_wrap .logo {padding-top: 56px;padding-bottom: 90px;}
+        #support_wrap .logo img:last-of-type {display: none;}
+        #support_wrap p:first-of-type {font-size: 46px;-webkit-text-stroke: 3px #000;color: #fff;font-weight: 300;letter-spacing: -1.15px;}
+        #support_wrap p .pink {color: #ff8fa5;}
+        #support_wrap p .purple {color: #cb83ff;}
+        #support_wrap p .blue {color: #b0e0ff;}
+        #support_wrap p:nth-of-type(2) {margin: 30px 0 40px;letter-spacing: -2.1px; font-size: 84px;font-weight: 300;-webkit-text-stroke: 3px #000;color: #fff;font-weight: 300;}
+        #support_wrap p:nth-of-type(2) span {position: relative;z-index: 1;}
+        #support_wrap p:nth-of-type(2)  b {color: #1cabe2;}
+        #support_wrap p:nth-of-type(2)  i {width: 272px;height: 130px;background: url(../images/highlight.png) no-repeat;background-size: contain; position: absolute;z-index: -1;left: -18px;top: -23px;}
+        #support_wrap p:last-of-type {font-size: 20px;color: #fff;font-weight: 100;line-height: 1.4;letter-spacing: -.5px;}
+        #support_wrap .emot {position: absolute;left: 50%;top: 50%;transform: translate(-50%, 52px);z-index: 1000;display: inline-block;width: auto;height: fit-content;}
+        #support_wrap .emot .heart01 {position: absolute;top: 66px;left: -45px; animation: heart01 1s .2s infinite both;}
+        #support_wrap .emot .heart02 {position: absolute;top: 115px;right: -51px; animation: heart03 1s .2s infinite both;}
+        #support_wrap .emot .heart03 {position: absolute;bottom: 40px; left: -41px; animation: heart02 1s .2s infinite both;}
+
+        /* Responsive */
+        @media screen and (min-width:768px) and (max-width:1700px) {
+            #support_wrap .inner { padding-left: 85px; }
+        }
+        @media screen and (max-width:767px){
+            .br_p {display: none;}
+            .br_m {display: block;}
+            #support_wrap {}
+            #support_wrap .inner {padding: 0 20px;position: relative;height: 100%;}
+            #support_wrap .logo {padding-top: 27px;padding-bottom: 43px;}
+            #support_wrap .logo img:first-of-type {display: none;}
+            #support_wrap .logo img:last-of-type {display: block;width: 63px;height: 34px;}
+            #support_wrap p {padding-left: 13px;}
+            #support_wrap p:first-of-type {font-size: 28px;-webkit-text-stroke: 1.5px #000;}
+            #support_wrap p:nth-of-type(2) {margin: 15px 0 34px;letter-spacing: -2.1px; font-size: 51px;-webkit-text-stroke: 1.5px #000;line-height: 1.24;}
+            #support_wrap p:last-of-type {font-size: 14px;line-height: 1.35;letter-spacing: -.5px;}
+            #support_wrap p:nth-of-type(2)  i {width: 163px;height: 78px;top: -11px;left: -11px;}
+            #support_wrap .emot {top: auto; bottom: 0; transform: translate(0);}
+            #support_wrap .emot img:first-of-type {width: 126px;height: 138px;}
+            #support_wrap .emot .heart01 {width: 19px;top: 29px;left: -20px;}
+            #support_wrap .emot .heart02 {width: 20px;top: 50px;right: -22px;}
+            #support_wrap .emot .heart03 {width: 20px;top: 103px;left: -18px;}
+        }
+
+        /* Ani */
+        @keyframes heart01 {
+            from { transform: translate(10px,  30px);opacity: 0; }
+            to  { transform: translate(0, 0px);opacity: 1; }
+        }
+        @keyframes heart02 {
+            from { transform: translate(-10px,  30px);opacity: 0; }
+            to  { transform: translate(0, 0px);opacity: 1; }
+        }
+        @keyframes heart03 {
+            from { transform: translate(-10px,  30px);opacity: 0; }
+            to  { transform: translate(0, 0px);opacity: 1; }
+        }
+    
+    </style>
+
+</head>
+<form id="child_form" name="child_form" method="post">
+</form>
+<body>
+    <div id="support_wrap">
+        <div class="inner aos-animate">
+            <h1 class="logo"><a href="https://www.unicef.or.kr/" target="_blank">
+                <img src="../images/logo.png" alt="유니세프 로고">
+                <img src="../images/logo_m.png" alt="유니세프 로고">
+            </a></h1>
+            <p data-aos="fade-up" data-aos-duration="500" >모든 <span class="pink">어린이</span>가<br class="br_m"> <span class="purple">행복</span>한 <span class="blue">세상</span>을 위해</p>
+            <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" >우리도 한때 <br class="br_m">  <span><b> 어린이</b><i data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1600"></i> 였어!</span></p>
+            <p class="small" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600" >
+                전 세계 어린이들의 권리를 지키기 위해<br>
+                2022년 5월 5일부터 5월 31일 까지 5천 원 이상<br class="br_m"> 일시후원 하시는<br class="br_p">
+                모든 정기후원자 분들께<br class="br_m"> 한정 최고심<br class="br_p">
+                움직이는 카카오톡 이모티콘<br class="br_m"> 쿠폰을 드립니다!
+            </p>
+            <div class="emot">
+                <img src="../images/support_emot.png" alt="최고심 이모티콘">
+                <img src="../images/support_heart01.png" alt="하트" class="heart01">
+                <img src="../images/support_heart02.png" alt="하트" class="heart02">
+                <img src="../images/support_heart03.png" alt="하트" class="heart03">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
