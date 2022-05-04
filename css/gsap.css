@@ -8,7 +8,7 @@ body { width:100%; background: #1cabe2; }
 .scroll p { padding-bottom: 10px; font-family: 'Noto Sans KR'; font-weight: 300; font-size: 14px; }
 .scroll i { border: 2px solid #000; border-radius: 50px; width: 29px; height: 52px; display: block; position: relative; margin:auto; }
 .scroll i:after { content: ''; width: 4px; height: 12px; background: #000; border-radius: 50px; position: absolute; top: 10px; left: 0; right: 0; margin: auto; animation: scroll 2s infinite; }
-.scroll i:before { content:url(/images/scrollDown_arrow.png); position:absolute; bottom: -28px; left:calc(50% - 1px); transform:translateX(-50%); animation:scroll_arrow .7s infinite alternate}
+.scroll i:before { content:url(../images/scrollDown_arrow.png); position:absolute; bottom: -28px; left:calc(50% - 1px); transform:translateX(-50%); animation:scroll_arrow .7s infinite alternate}
 
 /* ani */
 @keyframes scroll_mob {
@@ -43,23 +43,28 @@ body { width:100%; background: #1cabe2; }
 .section0 .section_wrap .scene0 .third_quote { font-size: 114px; font-weight: 300; color: #fff; -webkit-text-stroke: #000 3px; margin:40px auto 0; width: fit-content; letter-spacing: -5px; word-break: keep-all; }
 .section0 .section_wrap .scene0 .third_quote span { z-index: 1; position:relative; }
 .section0 .section_wrap .scene0 .third_quote span b { color: #1cabe2; padding-left: 20px;}
-.section0 .section_wrap .scene0 .third_quote span i { background: url(/images/highlight.png) 50% 50% no-repeat; width: 368px; height: 176px; position: absolute; top: -25px; left: -3px; z-index: -1; }
+.section0 .section_wrap .scene0 .third_quote span i { background: url(../images/highlight.png) 50% 50% no-repeat; width: 368px; height: 176px; position: absolute; top: -25px; left: -3px; z-index: -1; }
 
 @media screen and (min-width:768px) and (max-width:1280px){
 	
 }
 
 @media screen and (max-width:767px){
-    .section0 { height: 980vh; }
-    .section0 .section_wrap .logo { padding: 26px 0 0 20px; margin:0; max-width: 100%; width:63px; height: 34px; }
-    .section0 .section_wrap .logo img { width:100%; }
-    .section0 .section_wrap .scene0 .intro_quote { padding: 158px 20px 0 20px; }
+    .logo { max-width: 1700px; width: fit-content; right: auto; left: 0; margin:auto; position: fixed; z-index: 10; }
+    .logo img { margin: 26px 0 0 20px; width: 63px; height: 34px; }
+    .scroll { bottom:50px; }
+    .scroll p { display: none; }
+    .scroll i { border: 2px solid #000; border-radius: 50px; width: 29px; height: 52px; display: block; position: relative; margin:auto; }
+    .scroll i:after { content: ''; width: 4px; height: 12px; background: #000; border-radius: 50px; position: absolute; top: 10px; left: 0; right: 0; margin: auto; animation: scroll 2s infinite; }
+    .scroll i:before { content:url(../images/scrollDown_arrow.png); position:absolute; bottom: -28px; left:calc(50% - 1px); transform:translateX(-50%); animation:scroll_arrow .7s infinite alternate}
+
+    .section0 .section_wrap .scene0 .intro_quote { padding: 0 20px; }
     .section0 .section_wrap .scene0 .intro_quote .quote { font-size: 20px; line-height: 1.5; display: inline; word-break: keep-all; }
     .section0 .section_wrap .scene0 .intro_quote i { width: 2px; height: 17.5px; background-color: #fff; margin:auto 10.5px; transform: translateY(5px); position: absolute; }
-    .section0 .section_wrap .scene0 .second_quote {font-size: 31px;text-align: center; line-height: 1.3; -webkit-text-stroke: #000 1.5px; margin:30px auto 0; }
-    .section0 .section_wrap .scene0 .third_quote {font-size: 57px; margin:16.5px auto 0; -webkit-text-stroke: #000 1.5px; text-align: center; line-height: 1.2; }
+    .section0 .section_wrap .scene0 .second_quote {font-size: 31px;text-align: center; line-height: 1.3; -webkit-text-stroke: #000 1.5px; margin:15px auto 0; }
+    .section0 .section_wrap .scene0 .third_quote {font-size: 57px; margin:5px auto 0; -webkit-text-stroke: #000 1.5px; text-align: center; line-height: 1.2; }
     .section0 .section_wrap .scene0 .third_quote span b { padding-left: 0px; }
-    .section0 .section_wrap .scene0 .third_quote span i { width: 184px; height: 87.5px; background-size:99%; top:auto; right:auto; bottom: -9px; left: -17px; }
+    .section0 .section_wrap .scene0 .third_quote span i { width: 184px; height: 87.5px; background-size:99%; top:auto; right:auto; bottom: -8px; left: -20px; }
 }
 
 /************************************** section2 **************************************/
@@ -68,7 +73,7 @@ body { width:100%; background: #1cabe2; }
 
 /* scene1 */
 .section2 .section_wrap .scene1 { width:100%; height: 100%; display: flex; justify-content: center; align-items: center; } 
-.section2 .section_wrap .scene1_bg { height: 100vh; width: 100%; background: url(/images/s1_bg.png) 50% 50% no-repeat; background-size: cover; position:fixed; top:0; } 
+.section2 .section_wrap .scene1_bg { height: 100vh; width: 100%; background: url(../images/s1_bg.png) 50% 50% no-repeat; background-size: cover; position:fixed; top:0; } 
 .section2 .section_wrap .scene1 .fourth_quote { font-size: 60px; font-weight: 400; margin:auto; color: #fff; -webkit-text-stroke: #000 3px; width: fit-content; letter-spacing: -3px; }
 .section2 .section_wrap .scene1 .fourth_quote span:nth-of-type(1) { color: #ffee62; }
 .section2 .section_wrap .scene1 .fifth_quote { font-size: 60px; font-weight: 400; margin:auto; color: #fff; -webkit-text-stroke: #000 3px; width: fit-content; letter-spacing: -3px; }

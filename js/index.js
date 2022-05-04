@@ -170,7 +170,7 @@ var faqEvent = {
             var tabs_idx = $('.faq_tab li').index(this)+1;
             $('.faq_tab li').removeClass('on');
             $(this).addClass('on');
-            console.log(tabs_idx);
+            // console.log(tabs_idx);
             $('.faq_cont').removeClass('on');
             $('.faq_cont0' + tabs_idx).addClass('on');
         });
@@ -197,8 +197,8 @@ var s5Slider = {
 
         function s5Progress(index) {
             var count = $s5_slider.slick('getSlick').slideCount;
-            console.log(count);
-            console.log('index : ' + index);
+            // console.log(count);
+            // console.log('index : ' + index);
             
             // if (index == 0) {
             //     index = index + 5;
@@ -207,8 +207,8 @@ var s5Slider = {
             $s5_progressBar
             .css('background-size', s5_calc + '% 100%')
             .attr('aria-valuenow', s5_calc );
-            console.log('s5_calc : '+s5_calc);
-            console.log(index);
+            // console.log('s5_calc : '+s5_calc);
+            // console.log(index);
         };
 
         $s5_slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
@@ -225,8 +225,8 @@ var s5Slider = {
             swipeToSlide: true,
             cssEase: 'ease-out',
             centermode: true,
-            // variableWidth: true,
-            // adaptiveHeight: true,
+            variableWidth: true,
+            adaptiveHeight: true,
             prevArrow: $('.section5 .slider_nav .prev'), 
             nextArrow: $('.section5 .slider_nav .next'),
             responsive: [
@@ -296,20 +296,36 @@ var section4 = {
                     } 
                 });
                 
+                $(".section3").on('mousewheel',function(e){
+                    var scTop = $(window).scrollTop();
+                    var wheel = e.originalEvent.wheelDelta;
+
+                    if(wheel < 0){
+                        el.textContent = '';
+                        tl.restart(); 
+                    }
+                });
                 $(".section4").on('mousewheel',function(e){
                     var scTop = $(window).scrollTop();
                     var wheel = e.originalEvent.wheelDelta;
 
                     if(wheel < 0){
                         el.textContent = word;
-                        tl.pause(); 
-                        
+                        tl.pause();
                     } else {
-                        el.textContent = '';
-                        tl.restart();
-
+                        el.textContent = word;
+                        tl.pause();
                     }
-                });       
+                });
+                $(".section5").on('mousewheel',function(e){
+                    var scTop = $(window).scrollTop();
+                    var wheel = e.originalEvent.wheelDelta;
+
+                    if(wheel > 0){
+                        el.textContent = '';
+                        tl.restart(); 
+                    }
+                });         
 	        });
 
             tl.to(tmp, 1, {x: '+='+1});
@@ -341,13 +357,17 @@ var s3Slider = {
           if(!slick.$dots) return;
           $("#slide_paging").html('<b class="page">'+ (slick.currentSlide+1) +'</b> / ' + (slick.$dots[0].children.length));
         }).on('beforeChange', function(event, slick, currentSlide, nextSlide){ //슬라이드 변경 시 내비 및 페이징 변경
-          //내비 변경
+        
         $nav.removeClass("on");
         $nav.eq(nextSlide).addClass("on");
+
+        //내비 변경
         //   if(enableNav){
-            
+        //     $nav.removeClass("on");
+        //     $nav.eq(nextSlide).addClass("on");
         //     navStatus();
         //   }
+
           //페이징 변경
           if(!slick.$dots) return;
           var i = (nextSlide ? nextSlide : 0) + 1;
@@ -405,7 +425,7 @@ var s3Slider = {
             ]
         
         }).on('afterChange', function(event, slick, currentSlide, nextSlide){ 
-            console.log('slick index : ' + currentSlide);
+            // console.log('slick index : ' + currentSlide);
             
             if (currentSlide == 1) {
                 draw(22, '#mov_graph02', '#1cabe2');
@@ -542,15 +562,38 @@ var fullpage = {
         this.createFullpage();
     },
     createFullpage:function(){
+
+        AOS.init();  // AOS initiation
+        $('.aos-init').removeClass('aos-animate'); // remove ALL classes which triggers animation in document
+
         $('#fullpage').fullpage({
             'verticalCentered': false,
             'css3': true,
-            // 'navigationTooltips': ['fullPage.js', 'Powerful', 'Amazing', 'Simple'],
-    
+            scrollOverflow: true,
+            responsive: true,
+            // navigation: true,
+            // 'navigationTooltips': ['start', 'quality', 'performance', 'dob', 'parameters','compatibility', 'options', 'contact'],
+
             'afterLoad': function(anchorLink, index){
-                if(index == 3){
-                    
+                // var a_table = ['start', 'quality', 'performance', 'dob', 'parameters','compatibility', 'options', 'contact'];   // duplicated table of anchors name
+                var a_table = $('section').length;
+                for (var i = 0; i < a_table; i++) {
+                    $('.section' + i +'.active .aos-init').addClass('aos-animate'); // all magic goes here - when page is active, then all elements with AOS will start animate
                 }
+
+                if(index == 6){
+                    if($(window).width() < 768){
+                        $(this).addClass('fp-auto-height');
+                    }
+                }
+                /* 인포그래픽 섹션 도달 후 오토플레이 시작 */
+                if (index == 4) {
+                    $('.section3 .slider_wrap').slick("slickPlay")
+                } else {
+                    $('.section3 .slider_wrap').slick('slickGoTo', 0)
+                    $('.section3 .slider_wrap').slick('slickPause')
+                }
+
             },
 
             'onLeave': function(index, nextIndex, direction){

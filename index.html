@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="css/gsap.css">
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/jquery.fullpage.css">
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<!-- <script type="text/javascript" src="js/gsap.js"></script> -->
 
 	<!-- GSAP Settings -->
@@ -21,11 +21,11 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-	
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="js/lib/slick.min.js"></script>
 	<script type="text/javascript" src="js/lib/jquery.fullpage.js"></script>
+	<script type="text/javascript" src="js/lib/scrolloverflow.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
 	$(document).ready( function() {
@@ -71,7 +71,10 @@
 	</section> -->
 	
 <div id="wrap">
-	<div class="floating_widget"><a href="javascript:;"><img src="images/floating_widget.png" alt=""></a></div>
+	<div class="floating_widget"><a href="javascript:;">
+		<img src="images/floating_widget.png" alt="">
+		<img src="images/floating_widget_m.png" alt="">
+	</a></div>
 	<h1 class="logo"><img src="images/logo.png" alt="logo"></h1>
 	<div class="scroll">
 		<p>SCROLL DOWN</p>
@@ -87,11 +90,11 @@
 						<div class="intro_quote" id="txt">
 							<p class="quote" data-items="#어린이날100주년 #foreverychild #유니세프후원자라면"></p><i></i>
 						</div>
-						<div class="second_quote" id="txt">
+						<div class="second_quote" id="txt" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1000">
 							<p>모든 <span>어린이</span>가<br class="br_m"> <span>행복</span>한 <span>세상</span>을 위해</p>
 						</div>
-						<div class="third_quote" id="txt">
-							<p>우리도 한때 <br class="br_m"><span><b>어린이</b><i></i> 였어!</span></p>
+						<div class="third_quote" id="txt" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1300">
+							<p>우리도 한때 <br class="br_m"><span><b>어린이</b><i data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1600"></i> 였어!</span></p>
 						</div>
 					</div>
 				</div>
@@ -102,10 +105,10 @@
 			<div class="center">
 				<div class="inner">
 					<div class="s_txt">
-						<h1 class="s_tit">
+						<h1 class="s_tit" data-aos="fade-up" data-aos-duration="500">
 							올해로 <span class="ylw">100주년</span>을 맞은 <br>5월 <pan class="ylw">어린이날</pan>
 						</h1>
-						<p class="s_sub">
+						<p class="s_sub" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
 							1923년 5월, 모든 어린이가 <span class="ylw">차별 없이 <br class="br_m">배우고</span><br class="br_p"> <span class="ylw">즐겁게 놀 권리</span>를 보장할 것을 <br class="br_m">선언하였습니다.
 						</p>
 					</div>
@@ -121,13 +124,13 @@
 			<div class="section_wrap">
 				<div class="scene1">
 					<div class="scene1_container">
-						<div class="fourth_quote" id="txt">
+						<div class="fourth_quote" id="txt" data-aos="fade-up" data-aos-duration="500">
 							<p><span>유니세프 후원자</span>라면</p>
 						</div>
-						<div class="fifth_quote" id="txt">
+						<div class="fifth_quote" id="txt" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
 							<p><span>어린이들의 권리</span>를 알고 <br class="br_m">함께 지켜요!</p>
 						</div>
-						<a href="javascript:;" class="btn">일시후원하고 이모티콘 받기</a>
+						<a href="javascript:;" class="btn" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="600">일시후원하고 이모티콘 받기</a>
 					</div>
 				</div>
 			</div>
@@ -143,16 +146,16 @@
 						<div class="slider_wrap">
 							<div class="item item01">
 								<div class="inner">
-									<div class="slider_txt">
+									<div class="slider_txt" data-aos="fade-up" data-aos-duration="500">
 										<div>
 											<div class="s_tag"><img src="images/s3_tit01.png" alt=""></div>
-											<h1 class="s_tit">
+											<h1 class="s_tit" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
 												어린이들에게<br> <b>어떤 권리</b>가 있는지<br> 여러분은 알고 있나요?
 											</h1>
 											
 										</div>
 									</div>
-									<div class="slider_img">
+									<div class="slider_img" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
 										<img src="images/s3_slider01_img.png" alt="">
 									</div>
 								</div>
@@ -341,14 +344,14 @@
 					<div class="intro_quote" id="txt02">
 						<p class="quote2" data-items="#간섭보다 관심이 필요한 #우리도 한때 어린이였어!"></p><i></i>
 					</div>
-					<div class="second_quote" id="txt02">
+					<div class="second_quote" id="txt02" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
 						<p>어린이의 <span class="ylw">놀 권리</span>를 지켜줘요!</p>
 					</div>
-					<div class="third_quote" id="txt02">
-						<p>한정판 최고심 이모티콘 받고<br>
+					<div class="third_quote" id="txt02" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
+						<p>한정 최고심 이모티콘 받고<br>
 							이모티콘에 담긴 아동권리<br class="br_m"> 의미를 알아봐요.</p>
 					</div>
-					<a href="javascript:;" class="btn">아동권리 지키고 이모티콘 받기</a>
+					<a href="javascript:;" class="btn" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="900">아동권리 지키고 이모티콘 받기</a>
 				</div>
 			</div>
 		</section>
@@ -366,12 +369,12 @@
 						<img src="images/shining_r02.png" alt="">
 						<img src="images/shining_r03.png" alt="">
 					</div>
-					<h1 class="s_tit">
+					<h1 class="s_tit" data-aos="fade-up" data-aos-duration="500">
 						<span>유엔아동권리협약의 의미를 담은</span><br>
-						<span>움직이는 <span class="ylw">최고심<br class="br_m"> 이모티콘</span>을 만나봐요</span>
+						<span data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">움직이는 <span class="ylw">최고심<br class="br_m"> 이모티콘</span>을 만나봐요</span>
 					</h1>
-					<p class="clickCard">카드를 클릭해서 아동권리를 확인하세요!</p>
-					<div class="slider_container">
+					<p class="clickCard" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">카드를 클릭해서 아동권리를 확인하세요!</p>
+					<div class="slider_container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
 						<div class="slider_wrap">
 							<div class="item">
 								<div class="item_inner">
@@ -483,7 +486,7 @@
 							<span class="slider__label sr-only">
 						</div>
 					</div>
-					<a href="javascript:;" class="btn_pdf" onclick="clip(); return false;">친구에게 공유하기</a>
+					<a href="javascript:;" class="btn_pdf" onclick="clip(); return false;" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="900">친구에게 공유하기</a>
 				</div>
 			</div>
 		</section>
@@ -491,24 +494,30 @@
 		<section class="fp-section section-tb section6">
 			<div class="center">
 				<div class="inner">
-					<div class="s_tag">어린이날 100주년 기념</div>
-					<h1 class="s_tit">
+					<div class="s_tag" data-aos="fade-in" data-aos-duration="500">어린이날 100주년 기념</div>
+					<h1 class="s_tit" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
 						<span>유니세프 <b>한정 최고심</b></span><br>
 						<span><b>카카오톡 이모티콘</b> 증정 안내</span>
 					</h1>
-					<p class="s_txt01">전 세계 어린이들의 권리를 지키기 위해<br>
+					<p class="s_txt01" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">전 세계 어린이들의 권리를 지키기 위해<br>
 						2022년 5월 5일 부터 한달간 <b>5천원 이상</b><br class="br_m"> <b>일시후원</b>하시는 모든 정기후원자 분들께</p>
-					<p class="s_txt02"><!-- <span class="pink"> -->한정판 최고심<!-- </span> --> 움직이는<!-- <span class="blue"> --><br class="br_m"> <b>카카오톡 이모티콘 쿠폰</b><!-- </span> -->을 드립니다!</p>
-					<div class="cont">
-						<p class="cont_tit"><img src="images/sec6_join_tit.png" alt="sec6_join_tit"></p>
+					<p class="s_txt02" data-aos="fade-up" data-aos-duration="500" data-aos-delay="900"><!-- <span class="pink"> -->한정 최고심<!-- </span> --> 움직이는<!-- <span class="blue"> --><br class="br_m"> <b>카카오톡 이모티콘 쿠폰</b><!-- </span> -->을 드립니다!</p>
+					<div class="cont" data-aos="fade-up" data-aos-duration="500" data-aos-delay="900">
+						<p class="cont_tit">
+							<img src="images/sec6_join_tit.png" alt="sec6_join_tit">
+							<img src="images/sec6_join_tit_m.png" alt="sec6_join_tit">
+						</p>
 						<ul>
 							<li>
 								<div class="top">
-									<div class="icon"><img src="images/s6_icon01.png" alt="참여방법 아이콘"></div>
+									<div class="icon">
+										<img src="images/s6_icon01.png" alt="참여방법 아이콘">
+										<img src="images/s6_icon01_m.png" alt="참여방법 아이콘">
+									</div>
 									<div class="txt">
 										<div class="num">01</div>
 										<p>
-											5천원 이상<br>
+											5천원 이상<br class="br_p">
 											<b>일시후원</b>하기											
 										</p>
 									</div>
@@ -521,11 +530,14 @@
 							</li>
 							<li>
 								<div class="top">
-									<div class="icon"><img src="images/s6_icon02.png" alt="참여방법 아이콘"></div>
+									<div class="icon">
+										<img src="images/s6_icon02.png" alt="참여방법 아이콘">
+										<img src="images/s6_icon02_m.png" alt="참여방법 아이콘">
+									</div>
 									<div class="txt">
 										<div class="num">02</div>
 										<p>
-											카카오톡 이모티콘<br>
+											카카오톡 이모티콘<br class="br_p">
 											<b>쿠폰 받기</b>											
 										</p>
 									</div>
@@ -536,7 +548,10 @@
 							</li>
 							<li>
 								<div class="top">
-									<div class="icon"><img src="images/s6_icon03.png" alt="참여방법 아이콘"></div>
+									<div class="icon">
+										<img src="images/s6_icon03.png" alt="참여방법 아이콘">
+										<img src="images/s6_icon03_m.png" alt="참여방법 아이콘">
+									</div>
 									<div class="txt">
 										<div class="num">03</div>
 										<p>
@@ -548,9 +563,12 @@
 							</li>
 
 						</ul>
-						<div class="emoticon"><img src="images/s6_emot.png" alt="최고심 이모티콘"></div>
+						<div class="emoticon">
+							<img src="images/s6_emot.png" alt="최고심 이모티콘">
+							<img src="images/s6_emot_m.png" alt="최고심 이모티콘">
+						</div>
 					</div>
-					<p class="small">
+					<p class="small" data-aos="fade-up" data-aos-duration="500" data-aos-delay="900">
 						※ 증정되는 이모티콘은 카카오톡 움직이는 이모티콘(움스콘) 입니다.<br>
 						※ 이모티콘 쿠폰은 5월 말 일괄 순차 지급 됩니다.<br>
 						※ 이모티콘 유효기간은 한달입니다.
@@ -562,20 +580,22 @@
 		<section class="fp-section section-tb section7 ">
 			<div class="center">
 				<div class="inner">
-					<h1 class="s_tit">카카오톡 댓글 이벤트!</h1>
-					<p class="s_txt">유니세프 후원자라면 <b>카카오톡 채널</b>을 추가하고<br class="br_m"> <b>최고심 이모티콘 댓글</b>을 달아주세요!</p>
-					<div class="cont">
+					<h1 class="s_tit" data-aos="fade-up" data-aos-duration="500">카카오톡 댓글 이벤트!</h1>
+					<p class="s_txt" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">유니세프 후원자라면 <b>카카오톡 채널</b>을 추가하고<br class="br_m"> <b>최고심 이모티콘 댓글</b>을 달아주세요!</p>
+					<div class="cont" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
 						<div class="character">
 							<img src="images/s7_character.png" alt="최고심 이모티콘">
 							<img src="images/s7_character_m.png" alt="최고심 이모티콘">
 						</div>
 						<div class="left">
-							<p class="cont_tit">참여방법</p>
+							<p class="cont_tit"><img src="images/sec6_join_tit.png" alt="sec6_join_tit"></p>
 							<div class="bot">
 								<ul>
 									<li>
 										<div class="icon">
-											<img src="images/s7_icon01.png" alt="참여방법 아이콘">
+
+											<img src="images/s7_icon01.png" alt
+											="참여방법 아이콘">
 											<img src="images/s7_icon01_m.png" alt="참여방법 아이콘">
 										</div>
 										<div class="txt">
@@ -618,7 +638,7 @@
 							</div>
 						</div>
 						<div class="right">
-							<p class="cont_tit">참여선물</p>
+							<p class="cont_tit"><img src="images/sec6_present_tit.png" alt="sec6_present_tit"></p>
 							<div class="gift"><img src="images/s7_gift.png" alt="랜덤박스 이미지"></div>
 							<span>유니세프 랜덤박스</span>
 							<p class="txt">
@@ -631,7 +651,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="fp-section section-tb section8 ">
+		<section class="fp-section section8 ">
 			<div class="center">
 				<div class="inner">
 					<h1 class="s_tit">FAQ</h1>
