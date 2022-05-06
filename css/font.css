@@ -2,46 +2,26 @@
 
 /* FONT */
 
-/* 이사만루체 */
-/* @font-face {
-    font-family: 'GGongGothic';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
+@font-face {
+    font-family: 'GongGothic';
     font-weight: 100;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'GongGothic';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'GongGothic';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicBold.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-} */
+    src: local(※),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff') format('woff');
 
-@font-face {
-    font-family: 'GongGothic';
-    font-weight: 100;
-    src: local(※),
-    url(../font/esamanru-Light.otf) format('opentype'),
-    url(../font/esamanru-Light.ttf) format('truetype');
 }
 @font-face {
     font-family: 'GongGothic';
     font-weight: 300;
     src: local(※),
-    url(../font/esamanru-Medium.otf) format('opentype'),
-    url(../font/esamanru-Medium.ttf) format('truetype');
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.woff') format('woff');
+
 }
 @font-face {
     font-family: 'GongGothic';
     font-weight: 400;
     src: local(※),
-    url(../font/esamanru-Bold.otf) format('opentype'),
-    url(../font/esamanru-Bold.ttf) format('truetype');
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.woff') format('woff');
+
 } 
 
 
@@ -50,25 +30,28 @@
     font-family: 'Kyobo';
     font-weight: 100;
     src: local(※),
-    url(../font/Kyobo-Handwriting-2019.otf) format('opentype'),
-    url(../font/Kyobo-Handwriting-2019.ttf) format('truetype');
+    url(../font/KyoboHand.woff) format('woff');
+    /* url(../font/KyoboHand.woff) format('font-woff'); */
+
 }
 
 /* Noto Sans KR */
 
 @font-face {
     font-family: 'Noto Sans KR';
-    font-weight: normal;
+    font-weight: 200;
     src: local(※),
-    url(../font/NotoSansCJKkr-Regular.otf) format('opentype'),
-    url(../font/NotoSansCJKkr-Regular.ttf) format('truetype');
+    url(../font/NotoSansCJKkr-Regular.ttf) format('truetype'),
+    url(../font/NotoSansCJKkr-Regular.otf) format('opentype');
 }
 @font-face {
     font-family: 'Noto Sans KR';
     font-weight: 300;
     src: local(※),
-    url(../font/NotoSansCJKkr-Medium.otf) format('opentype'),
-    url(../font/NotoSansCJKkr-Medium.ttf) format('truetype');
+    url(../font/NotoSansCJKkr-Medium.woff) format('woff'),
+    url(../font/NotoSansCJKkr-Medium.ttf) format('truetype'),
+    url(../font/NotoSansCJKkr-Medium.otf) format('opentype');
+
 }
 
 /* Poppins */

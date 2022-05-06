@@ -203,7 +203,7 @@ var s5Slider = {
             // if (index == 0) {
             //     index = index + 5;
             // }
-            var s5_calc = (index + 1) * 20;
+            var s5_calc = (index + 1) * 16.66;
             $s5_progressBar
             .css('background-size', s5_calc + '% 100%')
             .attr('aria-valuenow', s5_calc );
@@ -261,7 +261,7 @@ var s5Slider = {
           
     },
     clickEvent:function(){
-        $(".section5 .slider_wrap .item").click(function() {
+        $(".section5 .slider_wrap .flip").click(function() {
             $(this).toggleClass('on');
         });
 
@@ -560,12 +560,12 @@ var scrollFadeUp = {
 var fullpage = {
     init:function(){
         this.createFullpage();
+        this.fullResize();
     },
     createFullpage:function(){
 
         AOS.init();  // AOS initiation
-        $('.aos-init').removeClass('aos-animate'); // remove ALL classes which triggers animation in document
-
+		
         $('#fullpage').fullpage({
             'verticalCentered': false,
             'css3': true,
@@ -587,7 +587,7 @@ var fullpage = {
                 //     }
                 // }
                 /* 인포그래픽 섹션 도달 후 오토플레이 시작 */
-                if (index == 4) {
+                if (index == 3) {
                     $('.section3 .slider_wrap').slick("slickPlay")
                     $('.floating_widget').fadeOut();
                 } else {
@@ -595,11 +595,19 @@ var fullpage = {
                     $('.section3 .slider_wrap').slick('slickPause');
                     $('.floating_widget').fadeIn();
                 }
+                if (index == 5) {
+                    $('.floating_widget').fadeOut();
+                }
 
             },
 
             'onLeave': function(index, nextIndex, direction){
-                if(nextIndex == 4 || nextIndex >= 8 || nextIndex == 6){
+                var a_table = $('section').length;
+                for (var i = 0; i < a_table; i++) {
+                    $('.section' + i +'.active .aos-init').removeClass('aos-animate'); // all magic goes here - when page is active, then all elements with AOS will start animate
+                }
+
+                if(nextIndex == 3 || nextIndex >= 7 || nextIndex == 5){
                     $('.scroll, .logo').fadeOut();
                 } else {
                     $('.scroll, .logo').fadeIn();
@@ -611,6 +619,39 @@ var fullpage = {
                 */
             }
         });
+
+        $( window ).resize(function() {
+            
+        });
+
+
+    },
+
+    fullResize:function() {
+        var waitForFinalEvent = (function () {
+            var timers = {};
+            return function (callback, ms, uniqueId) {
+              if (!uniqueId) {
+                uniqueId = "Don't call this twice without a uniqueId";
+              }
+              if (timers[uniqueId]) {
+                clearTimeout (timers[uniqueId]);
+              }
+              timers[uniqueId] = setTimeout(callback, ms);
+            };
+        })();
+
+        $(window).resize(function () {
+            waitForFinalEvent(function(){
+
+                var a_table = $('section').length;
+                for (var i = 0; i < a_table; i++) {
+                    $('.section' + i +'.active .aos-init').addClass('aos-animate'); // all magic goes here - when page is active, then all elements with AOS will start animate
+                }
+
+            }, 500, "some unique string");
+        });
+
     },
 };
 
@@ -625,3 +666,5 @@ function clip(){
     document.body.removeChild(textarea);
     alert("URL이 클립보드에 복사되었습니다.")
 }
+
+
