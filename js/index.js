@@ -587,7 +587,7 @@ var fullpage = {
                 // }
                 /* 인포그래픽 섹션 도달 후 오토플레이 시작 */
                 if (index == 3) {
-                    $('.section3 .slider_wrap').slick("slickPlay")
+                    //$('.section3 .slider_wrap').slick("slickPlay")
                     $('.floating_widget').fadeOut();
                 } else {
                     $('.section3 .slider_wrap').slick('slickGoTo', 0);
