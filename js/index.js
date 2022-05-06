@@ -564,7 +564,7 @@ var fullpage = {
     },
     createFullpage:function(){
 
-        AOS.init();  // AOS initiation
+        //AOS.init();  // AOS initiation
 		
         $('#fullpage').fullpage({
             'verticalCentered': false,
@@ -575,11 +575,10 @@ var fullpage = {
             // 'navigationTooltips': ['start', 'quality', 'performance', 'dob', 'parameters','compatibility', 'options', 'contact'],
 
             'afterLoad': function(anchorLink, index){
-                // var a_table = ['start', 'quality', 'performance', 'dob', 'parameters','compatibility', 'options', 'contact'];   // duplicated table of anchors name
-                var a_table = $('section').length;
-                for (var i = 0; i < a_table; i++) {
-                    $('.section' + i +'.active .aos-init').addClass('aos-animate'); // all magic goes here - when page is active, then all elements with AOS will start animate
-                }
+                // var a_table = $('section').length;
+                // for (var i = 0; i < a_table; i++) {
+                //     $('.section' + i +'.active .aos-init').addClass('aos-animate'); // all magic goes here - when page is active, then all elements with AOS will start animate
+                // }
 
                 // if(index == 6){
                 //     if($(window).width() < 768){
@@ -602,10 +601,10 @@ var fullpage = {
             },
 
             'onLeave': function(index, nextIndex, direction){
-                var a_table = $('section').length;
-                for (var i = 0; i < a_table; i++) {
-                    $('.section' + i +'.active .aos-init').removeClass('aos-animate'); // all magic goes here - when page is active, then all elements with AOS will start animate
-                }
+                // var a_table = $('section').length;
+                // for (var i = 0; i < a_table; i++) {
+                //     $('.section' + i +'.active .aos-init').removeClass('aos-animate'); // all magic goes here - when page is active, then all elements with AOS will start animate
+                // }
 
                 if(nextIndex == 3 || nextIndex >= 7 || nextIndex == 5){
                     $('.scroll, .logo').fadeOut();
@@ -623,6 +622,8 @@ var fullpage = {
         $( window ).resize(function() {
             
         });
+
+        
 
 
     },
@@ -643,11 +644,11 @@ var fullpage = {
 
         $(window).resize(function () {
             waitForFinalEvent(function(){
+                // var a_table = $('section').length;
+                // for (var i = 0; i < a_table; i++) {
+                //     $('.section' + i +'.active .aos-init').addClass('aos-animate'); // all magic goes here - when page is active, then all elements with AOS will start animate
+                // }
 
-                var a_table = $('section').length;
-                for (var i = 0; i < a_table; i++) {
-                    $('.section' + i +'.active .aos-init').addClass('aos-animate'); // all magic goes here - when page is active, then all elements with AOS will start animate
-                }
 
             }, 500, "some unique string");
         });

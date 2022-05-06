@@ -594,7 +594,7 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 	.section7 .cont {flex-direction: column;width: 100%;margin-top: 135px;}
 	.section7 .cont .cont_tit {font-size: 16px;-webkit-text-stroke: 1px #000;}
 	.section7 .cont .cont_tit img:first-of-type {display: none;}
-	.section7 .cont .cont_tit img:last-of-type {display: block;width: 60px;display: inline-block;}
+	.section7 .cont .cont_tit img:last-of-type {display: block;width: 88px;display: inline-block;}
 	.section7 .cont .cont_tit:before,
 	.section7 .cont .cont_tit:after {width: 7px;height: 7px;border: 1px solid #000;}
 	.section7 .cont .cont_tit:before {margin-right: 14px;margin-bottom: 5px;}
@@ -657,8 +657,8 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 	.section8 .inner .faq_tab li {font-size: 18px;line-height: 40px;border: 1px solid #1cabe2;}
 	.section8 .inner .content {padding: 0;}
 	.section8 .inner .content .que {padding: 18px 0;}
-	.section8 .inner .content .que p {font-size: 17px;letter-spacing: -.85px; padding-left: 37px; line-height: 1.3;}
-	.section8 .inner .content .que p:before {font-size: 17px;margin-left: 11px;margin-right: 10px; position: absolute; left: 20px;}
+	.section8 .inner .content .que p {font-size: 17px;letter-spacing: -.85px; padding-left: 45px; line-height: 1.3;}
+	.section8 .inner .content .que p:before {font-size: 17px;margin-left: 0px;margin-right: 10px; position: absolute; left: 20px;}
 	.section8 .inner .content .ans {padding: 19px 15px 45px 0;}
 	.section8 .inner .content .ans p {font-size: 15px; line-height: 1.5;}
 	.section8 .inner .content .ans p:before {font-size: 17px;margin-left: 11px;margin-right: 10px;}
@@ -679,11 +679,51 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 	.footer p:nth-of-type(1) {font-size: 13px;}
 	.footer p:nth-of-type(2) {opacity: 1;margin-bottom: 17px;}
 }
-/* --------------------------------- */
-.section1.a_on h1.s_tit,
-.section1.a_on .s_sub  {transform: translateY(0);opacity: 1; transition: all .5s both;}
+
+
+/* ----------------- ani ---------------- */
+.section0.active .second_quote {animation:fadeUp 0.8s .6s both}
+.section0.active .third_quote {animation:fadeUp 0.8s .9s both}
+.section0.active .section_wrap .scene0 .third_quote span i { animation:zoomIn 0.8s 1.5s both }
+
+.section1.active h1.s_tit {animation:fadeUp 0.8s .3s both}
+.section1.active .s_sub {animation:fadeUp 0.8s .6s both}
+
+.section3.active h1.s_tit {animation:fadeUp 0.8s .3s both}
+.section3.active .slider_img {animation:fadeUp 0.8s .6s both}
+
+.section4.active .intro_quote {animation:fadeUp 0.8s .3s both}
+.section4.active .second_quote {animation:fadeUp 0.8s .6s both}
+.section4.active .third_quote {animation:fadeUp 0.8s .9s both}
+
+.section5.active h1.s_tit {animation:fadeUp 0.8s .3s both}
+.section5.active .clickCard {animation:fadeUp 0.8s .6s both}
+.section5.active .slider_container {animation:fadeUp 0.8s .9s both}
+.section5.active .gosim_bottom {animation:fadeUp 0.8s 1.2s both}
+
+.section6.active .s_tag {animation:fadeUp 0.8s .3s both}
+.section6.active .s_tit {animation:fadeUp 0.8s .6s both}
+.section6.active .cont {animation:fadeUp 0.8s .9s both}
+.section6.active .small {animation:fadeUp 0.8s 1.2s both}
+
+.section7.active .s_tit {animation:fadeUp 0.8s .3s both}
+.section7.active .s_txt {animation:fadeUp 0.8s .6s both}
+.section7.active .cont {animation:fadeUp 0.8s .9s both}
+
+.section8.active .s_tit {animation:fadeUp 0.8s .3s both}
+.section8.active .faq_tab {animation:fadeUp 0.8s .6s both}
+.section8.active .content {animation:fadeUp 0.8s .9s both}
 
 
 
-.animation2.box { transform: translateY(70px); opacity: 0; transition: all 0.5s; }
-.animation2.box.visible { opacity: 1; transform: translateY(0); transition: all 0.5s; }
+
+
+@keyframes fadeUp{
+	0%{transform:translateY(80px); opacity: 0;}
+	100%{transform:translateY(0); opacity: 1;}
+}
+
+@keyframes zoomIn{
+	0%{transform:scale(0); opacity: 0;}
+	100%{transform:scale(1); opacity: 1;}
+}

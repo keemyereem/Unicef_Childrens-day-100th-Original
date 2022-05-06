@@ -46,8 +46,9 @@ body { width:100%; background: #1cabe2; }
 .section0 .section_wrap .scene0 .third_quote span i { background: url(../images/highlight.png) 50% 50% no-repeat; width: 368px; height: 176px; position: absolute; top: -25px; left: -3px; z-index: -1; }
 
 @media screen and (min-width:768px) and (max-width:1280px){
-    .section0 .section_wrap .scene0 .intro_quote { height:140px; }
+    /* .section0 .section_wrap .scene0 .intro_quote { height:140px; } */
 	.section0 .section_wrap .scene0 .third_quote { text-align: center; }
+    
 }
 
 @media screen and (max-width:767px){
