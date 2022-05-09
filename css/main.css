@@ -492,12 +492,14 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 .section6 .cont_tit:after {margin-left: 19px; margin-bottom: 8px; }
 .section6 .cont_tit img:last-of-type {display: none;}
 .section6 .cont ul {display: flex;justify-content: space-between;}
+.section6 .cont ul li:first-child {padding-right: 10px;}
+.section6 .cont ul li {flex: 1;}
 .section6 .cont ul li .top {display: flex;text-align: left;align-items: center;}
 .section6 .cont ul li .top .icon {margin-right: 28px;}
 .section6 .cont ul li .top .icon img:last-of-type {display: none;}
 .section6 .cont ul li .top .num {font-size: 20px;font-family: 'Poppins';font-weight: 700;color: #1cabe2;margin: 8px 0;}
 .section6 .cont ul li .top  p {font-size: 16px;font-weight: 100;}
-.section6 .cont ul li > p {font-family: 'Noto Sans KR';font-weight: 200; font-size: 13px;color: #858585;text-align: left;letter-spacing: -.325px;margin-top: 15px;}
+.section6 .cont ul li > p {font-family: 'Noto Sans KR';font-weight: 200; font-size: 13px;color: #858585;text-align: left;letter-spacing: -.625px;margin-top: 15px;}
 .section6 .cont ul li > p.bot > b {font-weight: bold;}
 .section6 .small {font-size: 14px;color: #fff;font-family: 'Noto Sans KR';font-weight: 200;text-align: left;margin-left: 48px;margin-top: 25px;margin-right: auto;}
 .section6 .cont .emoticon {position: absolute;bottom: -65px;right: 32px;}
