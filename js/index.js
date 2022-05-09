@@ -360,6 +360,7 @@ var s3Slider = {
         
         $nav.removeClass("on");
         $nav.eq(nextSlide).addClass("on");
+        
 
         //내비 변경
         //   if(enableNav){
@@ -389,6 +390,7 @@ var s3Slider = {
             $(this).addClass("on")
             $("#slide_paging").find(".page").text(slideNo +1);
             navStatus();
+            
           }
         });
 
@@ -426,34 +428,50 @@ var s3Slider = {
         
         }).on('afterChange', function(event, slick, currentSlide, nextSlide){ 
             // console.log('slick index : ' + currentSlide);
-            
-            if (currentSlide == 1) {
+            if (currentSlide == 0) {
+                $('.slider_nav .next').addClass('ylw');
+            }else if (currentSlide == 1) {
                 draw(22, '#mov_graph02', '#1cabe2');
                 replay1();
                 $('.item02').addClass('on');
+                $('.slider_nav .next').removeClass('ylw');
             }else if (currentSlide == 2){
                 draw(69, '#mov_graph03', '#ffc20e');
                 replay2();
                 $('.item03').addClass('on');
+                $('.slider_nav .next').removeClass('ylw');
             }
             else if (currentSlide == 3){
                 draw(33, '#mov_graph04', '#1cabe2');
                 replay3();
                 $('.item04').addClass('on');
+                $('.slider_nav .next').removeClass('ylw');
             }
             else if (currentSlide == 4){
                 draw(25, '#mov_graph05', '#ffc20e');
                 replay4();
                 $('.item05').addClass('on');
+                $('.slider_nav .next').removeClass('ylw');
             }else if (currentSlide == 5) {
                 $('.item06 li').addClass('on');
+                $('.slider_nav .next').removeClass('ylw');
             }else {
                 $('.item').removeClass('on');
                 $('.item06 li').removeClass('on');
+                $('.slider_nav .next').removeClass('ylw');
             }
             
 
         });
+        // s3Nav();
+        // function s3Nav(){
+        //     let n1t = $slide.find('.item01').hasClass('slick-active');
+        //     if(n1t === true){
+        //         $('.section3 .slider_nav .next').css({"background": "#ffee62 url(../images/arrow_right_blue.png) no-repeat 50% 50%"});
+        //     }else {
+        //         $('.section3 .slider_nav .next').css({"background": "#1cabe2 url(../images/arrow_right.png) no-repeat 50% 50%"});
+        //     }
+        // };
 
         function draw(max, classname, colorname){
             var i=1;
