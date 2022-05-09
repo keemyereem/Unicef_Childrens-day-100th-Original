@@ -95,11 +95,11 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 .section3 .slider_wrap .item { /* position: absolute; */ width: 100%; overflow: hidden;}
 .section3 .slider_wrap .item .s_txt { padding-bottom: 80px; }
 
-.section3 .slider_wrap .item01 .inner {display: flex;align-items: center;max-width: 100%;width: 100%;height: 100vh; /* justify-content: end; */ border: 1px solid blue; }
-.section3 .slider_wrap .item01 .slider_txt {width: 50%; text-align: center; flex-basis: content;padding-left: 80px; /* margin-right: 6vw;  *//* position: relative; */border: 1px solid #f00; }
+.section3 .slider_wrap .item01 .inner {display: flex;align-items: center;max-width: 100%;width: 100%;height: 100vh; /* justify-content: end; */  }
+.section3 .slider_wrap .item01 .slider_txt {width: 50%; text-align: center; flex-basis: content;padding-left: 80px; /* margin-right: 6vw;  *//* position: relative; */ }
 .section3 .slider_wrap .item01 .slider_txt > div {/* width: auto;position: absolute;right: 0;top: 50%;transform: translateY(-50%); padding-left: 149px;*/ box-sizing: border-box;}
 .section3 .slider_wrap .item01 .slider_txt img {margin: 0 auto;}
-.section3 .slider_wrap .item01 .slider_img {width:calc(50% + 67px); /* width:calc(50% - 15px); */ border: 1px solid #000;overflow-y: hidden;position: relative; }
+.section3 .slider_wrap .item01 .slider_img {width:calc(50% + 67px); /* width:calc(50% - 15px); */overflow-y: hidden;position: relative; }
 .section3 .slider_wrap .item01 .slider_img img { width:100%; height:100%; object-fit: cover; }
 
 .section3 .slider_wrap .item01 .s_tit {margin: 40px 0; -webkit-text-stroke: 3px #000;font-size: 60px;font-weight: 300;color: #fff;letter-spacing: -3px; text-align: left;}
@@ -145,6 +145,7 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 	.section3 .slider_nav > div {width: 40px;height: 40px; background-size: 20%; position: absolute; bottom:20px; }
 	.section3 .slider_nav > .prev { background: rgba(0, 0, 0,.5) url(../images/arrow_left.png) no-repeat 50% 50%; background-size: 25%; left:20px; }
 	.section3 .slider_nav > .next { background-size: 25%; right:20px; }
+	.section3 .slider_nav > .next.ylw {background-size: 25%; right:20px;}
 	.section3 .slider_dots {bottom: 31px; }
 	.section3 .slider_dots li {width: 6.5px;height: 6.5px; margin: 0 7.5px;cursor: pointer;}
 	.section3 .slider_dots li:nth-child(2n-1).on {width: 19px;height: 17.5px; }
