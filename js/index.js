@@ -203,7 +203,7 @@ var s5Slider = {
             // if (index == 0) {
             //     index = index + 5;
             // }
-            var s5_calc = (index + 1) * 16.66;
+            var s5_calc = (index + 1) * 12.5;
             $s5_progressBar
             .css('background-size', s5_calc + '% 100%')
             .attr('aria-valuenow', s5_calc );
@@ -242,11 +242,11 @@ var s5Slider = {
                     breakpoint: 767,   
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1,                      
+                        slidesToScroll: 1,                   
                     }
                 }
             ]
-        })
+        });
 
 
         s5Progress(0);
@@ -268,78 +268,6 @@ var s5Slider = {
           
     },
 };
-
-var section4 = {
-    init:function(){
-        this.sec4_quote();
-    },
-
-    sec4_quote:function() {
-        let el = document.getElementsByClassName('quote2')[0];
-		let items = el.dataset.items.split(', ');
-
-		TweenMax.to(el.nextElementSibling, 0.6, {
-			opacity: 0, 
-			repeat: -1, 
-			ease: Linear.easeNone
-		});
-
-		let tl = new TimelineMax({repeat: 0});	// 반복 설정
-		let tmp = { x: 0 };
-
-		items.forEach((word, idx) => {
-			let chars = word.split('');
-
-			chars.forEach(char => {    
-                tl.to(tmp, 0.1, { x: '+='+1, onComplete: () => {                      
-                        el.textContent += char;
-                    } 
-                });
-                
-                $(".section3").on('mousewheel',function(e){
-                    var scTop = $(window).scrollTop();
-                    var wheel = e.originalEvent.wheelDelta;
-
-                    if(wheel < 0){
-                        el.textContent = '';
-                        tl.restart(); 
-                    }
-                });
-                $(".section4").on('mousewheel',function(e){
-                    var scTop = $(window).scrollTop();
-                    var wheel = e.originalEvent.wheelDelta;
-
-                    if(wheel < 0){
-                        el.textContent = word;
-                        tl.pause();
-                    } else {
-                        el.textContent = word;
-                        tl.pause();
-                    }
-                });
-                $(".section5").on('mousewheel',function(e){
-                    var scTop = $(window).scrollTop();
-                    var wheel = e.originalEvent.wheelDelta;
-
-                    if(wheel > 0){
-                        el.textContent = '';
-                        tl.restart(); 
-                    }
-                });         
-	        });
-
-            tl.to(tmp, 1, {x: '+='+1});
-            chars.forEach(char => {
-                tl.to(tmp, 0.05, {  x: '+='+1, onComplete: () => {
-                        //el.textContent = el.textContent.slice(0, -1);   --> 타이핑 종료되면 전부 지우기
-                    } 
-                });
-            })
-        });
-    },
-
-};
-
 
 var s3Slider = {
     init:function(){
@@ -427,38 +355,12 @@ var s3Slider = {
             ]
         
         }).on('afterChange', function(event, slick, currentSlide, nextSlide){ 
-            // console.log('slick index : ' + currentSlide);
-            if (currentSlide == 0) {
+            if (currentSlide == 2){
+                //$('.scroll').removeClass('off');
+                $('.slider_nav .next').removeClass('ylw');
+            } else {
+                //$('.scroll').removeClass('off');
                 $('.slider_nav .next').addClass('ylw');
-            }else if (currentSlide == 1) {
-                draw(22, '#mov_graph02', '#1cabe2');
-                replay1();
-                $('.item02').addClass('on');
-                $('.slider_nav .next').removeClass('ylw');
-            }else if (currentSlide == 2){
-                draw(69, '#mov_graph03', '#ffc20e');
-                replay2();
-                $('.item03').addClass('on');
-                $('.slider_nav .next').removeClass('ylw');
-            }
-            else if (currentSlide == 3){
-                draw(33, '#mov_graph04', '#1cabe2');
-                replay3();
-                $('.item04').addClass('on');
-                $('.slider_nav .next').removeClass('ylw');
-            }
-            else if (currentSlide == 4){
-                draw(25, '#mov_graph05', '#ffc20e');
-                replay4();
-                $('.item05').addClass('on');
-                $('.slider_nav .next').removeClass('ylw');
-            }else if (currentSlide == 5) {
-                $('.item06 li').addClass('on');
-                $('.slider_nav .next').removeClass('ylw');
-            }else {
-                $('.item').removeClass('on');
-                $('.item06 li').removeClass('on');
-                $('.slider_nav .next').removeClass('ylw');
             }
             
 
@@ -604,16 +506,13 @@ var fullpage = {
                 //     }
                 // }
                 /* 인포그래픽 섹션 도달 후 오토플레이 시작 */
-                if (index == 3) {
-                    //$('.section3 .slider_wrap').slick("slickPlay")
-                    $('.floating_widget').fadeOut();
+                if ( index == 1 ) {
+                    $('.logo, .scroll').fadeIn(0);
                 } else {
-                    $('.section3 .slider_wrap').slick('slickGoTo', 0);
-                    $('.section3 .slider_wrap').slick('slickPause');
-                    $('.floating_widget').fadeIn();
+                    $('.logo, .scroll').fadeOut(0);
                 }
-                if (index == 5) {
-                    $('.floating_widget').fadeOut();
+                if ( index !== 2 ) {
+                    $('.section3 .slider_wrap').slick('slickGoTo', 0);
                 }
 
             },
@@ -624,13 +523,12 @@ var fullpage = {
                 //     $('.section' + i +'.active .aos-init').removeClass('aos-animate'); // all magic goes here - when page is active, then all elements with AOS will start animate
                 // }
 
+                /*
                 if(nextIndex == 3 || nextIndex >= 7 || nextIndex == 5){
                     $('.scroll, .logo').fadeOut();
                 } else {
                     $('.scroll, .logo').fadeIn();
-                }
-                /*
-                else if(index == 3 && direction == 'up'){
+                } else if(index == 3 && direction == 'up'){
                     $('.fp-section').eq(index-1).removeClass('moveUp').addClass('moveDown');
                 }
                 */
