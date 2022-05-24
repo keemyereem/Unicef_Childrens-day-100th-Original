@@ -27,11 +27,12 @@ body { width:100%; background: #2589c9; }
 }
 
 /************************************** section1 **************************************/
-.section0 { width: 100%; display: flex; justify-content: center; flex-direction: column; }
-.section0 .section_wrap { max-width: 1700px; width: 100%; right: 0; left: 0; position:absolute; top: 0; margin: auto; font-family: 'GongGothic'; height:100%; }
+.section0 { width: 100%;height: 100%; display: flex; justify-content: center; flex-direction: column;align-items: center; }
+.section0 .fp-scroller {height: 100%;}
+.section0 .section_wrap { display: flex; justify-content: center; align-items: center; max-width: 1700px; width: auto;font-family: 'GongGothic'; height:100%; }
 
 /* scene0 */
-.section0 .section_wrap .scene0 { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; letter-spacing: -0.25px; }
+.section0 .section_wrap .scene0 { width: 100%;max-width: 495px; /* height: 100%; */height: auto;/*  display: flex; justify-content: center; align-items: center; */ letter-spacing: -0.25px; }
 .section0 .section_wrap .scene0 .intro_quote { text-align: center; /*padding-top: 295px;*/ }
 .section0 .section_wrap .scene0 .intro_quote .quote, 
 .section0 .section_wrap .scene0 .intro_quote i { display: inline-block; color: #fff; font-size: 30px; font-weight: 100; }
@@ -41,7 +42,7 @@ body { width:100%; background: #2589c9; }
 .section0 .section_wrap .scene0 .third_quote p:last-of-type { display: flex; flex-direction: column; font-size: 84px; padding-top: 5px; font-weight: 300; }
 .section0 .section_wrap .scene0 .third_quote p:last-of-type span:not(:first-of-type) { padding-top:10px; }
 .section0 .section_wrap .scene0 .third_quote span b { color: #ffdc0e; padding-left: 20px; font-weight: 300; }
-.section0 .section_wrap .scene0 .fourth_quote { text-align: center; font-size: 30px; line-height: 40px; font-weight: 100; color: #fff; margin:20px 0 0 15px; width: fit-content;  }
+.section0 .section_wrap .scene0 .fourth_quote { text-align: center; font-size: 30px; line-height: 40px; font-weight: 100; color: #fff; margin:20px auto 0; width: fit-content;  }
 .section0 .section_wrap .scene0 .fourth_quote p:last-of-type { color: #ffdc0e; }
 
 @media screen and (min-width:768px) and (max-width:1280px){
@@ -61,18 +62,23 @@ body { width:100%; background: #2589c9; }
     .scroll i:after { display: none; }
     .scroll i:before { content:url(../images/scrollDown_arrow.png); position:absolute; bottom: -28px; left:calc(50% - 1px); transform:translateX(-50%); animation:scroll_arrow .7s infinite alternate; }
 
-    .section0 .section_wrap { height: auto; top:132px; padding: 0 20px; width: calc(100% - 40px); }
-    .section0 .section_wrap .scene0 .intro_quote { padding: 0 20px; }
+    .section0 .section_wrap { height: auto; top:132px; /* padding: 0 20px; */ width: calc(100% - 40px); }
+    .section0 .section_wrap .scene0 {max-width: 340px;}
+    .section0 .section_wrap .scene0 .intro_quote { /* padding: 0 20px; */ }
     .section0 .section_wrap .scene0 .intro_quote .quote { font-size: 19px; line-height: 1.5; display: inline; word-break: keep-all; }
     .section0 .section_wrap .scene0 .intro_quote i { width: 2px; height: 15px; margin:0 0 0 11.5px; }
-    .section0 .section_wrap .scene0 .second_quote {font-size: 20px; line-height: 1.3; margin:30px 0 0 30px; }
-    .section0 .section_wrap .scene0 .third_quote {font-size: 199px; margin:15px 20px 0; text-align: center; }
+    .section0 .section_wrap .scene0 .second_quote {font-size: 20px; line-height: 1.3; margin:30px 0 0 0; }
+    .section0 .section_wrap .scene0 .second_quote p {padding-left: 29px;}
+    .section0 .section_wrap .scene0 .third_quote {font-size: 199px; /* margin:15px 0 0 -10px; */margin: 15px auto 0; text-align: center; }
     .section0 .section_wrap .scene0 .third_quote p:last-of-type { font-size: 56px; padding-top:2px; }
     .section0 .section_wrap .scene0 .third_quote p:last-of-type span:not(:first-of-type) { padding-top:8px; }
     .section0 .section_wrap .scene0 .third_quote span b { padding-left: 10px; }
-    .section0 .section_wrap .scene0 .fourth_quote { font-size: 20px; line-height: 1.35; margin:15px 20px 0;  }
+    .section0 .section_wrap .scene0 .fourth_quote { font-size: 20px; line-height: 1.35; margin:15px auto 0;  }
+    .section0 .section_wrap .scene0 .fourth_quote p {letter-spacing: -.5px;;}
 }
-
+@media screen and (max-width:360px){
+    .section0 .section_wrap .scene0 .second_quote p {padding-left: 15px;}
+}
 /************************************** section2 **************************************/
 .section2 { width: 100%; display: flex; justify-content: center; flex-direction: column; }
 .section2 .section_wrap { max-width: 1700px; width: 100%; right: 0; left: 0; position:absolute; top: 0; margin: auto; font-family: 'GongGothic'; height:100%; }

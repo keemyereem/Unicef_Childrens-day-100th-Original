@@ -20,7 +20,7 @@
         .br_m {display: none;}
         #support_wrap {width: 100%;height: 100vh;background: #2589c9;position: relative;}
         #support_wrap .inner {max-width: 1700px;margin: 0 auto;}
-        #support_wrap .logo {padding-top: 56px;padding-bottom: 63px;}
+        #support_wrap .logo {padding-top: 56px;padding-bottom: 4.5vh;}
         #support_wrap .logo img:last-of-type {display: none;}
         #support_wrap .second_quote p {font-size: 25px; color: #fff;font-weight: 300;letter-spacing: -0.25px; margin:0 0 0 10px}
         #support_wrap .third_quote { display:flex; font-size: 298px; font-weight: 300; color: #fff; margin:20px 0 0 0; width: fit-content; line-height: 1; }
@@ -50,22 +50,21 @@
             #support_wrap .logo {padding-top: 27px;padding-bottom: 43px;}
             #support_wrap .logo img:first-of-type {display: none;}
             #support_wrap .logo img:last-of-type {display: block;width: 63px;height: 34px;}
-            #support_wrap .second_quote {font-size: 20px; line-height: 1.3; margin:0 0 0 10px; }
-            #support_wrap .third_quote {font-size: 199px; margin:10px 15px 0; text-align: center; }
+            #support_wrap .second_quote {line-height: 1.3; /* margin:0 0 0 10px; */ }
+            #support_wrap .second_quote p {font-size: 18px;font-weight: 100;}
+            #support_wrap .third_quote {font-size: 199px; /* margin:10px 15px 0; */margin:10px 0 0; text-align: center; }
             #support_wrap .third_quote p:last-of-type { font-size: 56px; padding-top:2px; }
             #support_wrap .third_quote p:last-of-type span:not(:first-of-type) { padding-top:8px; }
             #support_wrap .third_quote span b { padding-left: 10px; }
-            #support_wrap .small { color:#fff; font-size: 14px; line-height:1.4; font-weight: 100; margin-top: 15px; margin-left: 12.5px; }
-            #support_wrap .sub { color:#fff; font-size: 11px; line-height:1.4; margin-top:15px; margin-left: 12.5px; }
-            #support_wrap .num {font-size: 10px;color: rgba(255, 255, 255, 0.5); /* position: absolute; bottom:3.5em; */ margin-left: 12.5px; letter-spacing: -.65px; font-family: "Roboto", sans-serif; font-weight: 400; letter-spacing: -0.01em; /* line-height: 1.65em; */ }
+            #support_wrap .small { color:#fff; font-size: 14px; line-height:1.4; font-weight: 100; margin-top: 15px; /* margin-left: 12.5px; */ }
+            #support_wrap .sub { color:#fff; font-size: 11px; line-height:1.4; margin-top:15px; /* margin-left: 12.5px; */ }
+            #support_wrap .num {font-size: 10px; /* margin-left: 12.5px; */ bottom:auto; margin-top:34px; }
 
-            #support_wrap .emot {top: auto; bottom: 0; transform: translate(0); left:57%; }
+            #support_wrap .emot {top: auto; bottom: auto; transform: translate(0); left:57%; }
             #support_wrap .emot img:first-of-type {width: 126px;height: 138px;}
             #support_wrap .emot .heart01 {width: 19px;top: 29px;left: -20px;}
             #support_wrap .emot .heart02 {width: 20px;top: 50px;right: -22px;}
             #support_wrap .emot .heart03 {width: 20px;top: 103px;left: -18px;}
-            #support_wrap p:nth-of-type(4) {font-size: 12px;margin: 15px 0 60px;letter-spacing: -1.2px;}
-            #support_wrap p:nth-of-type(5) {font-size: 0.8em; position: absolute; /* bottom:2em; */ }
         }
 
         /* Ani */
@@ -105,7 +104,7 @@
                     <span><b>자</b>고</span>
                 </p>
             </div>
-            <p class="small" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600" >
+            <p class="small" data-aos="fade-in" data-aos-duration="800" data-aos-delay="600" >
                 전 세계 어린이들의 권리를 지키기 위해<br>
                 본 캠페인을 통해 5천 원 이상 일시후원 하시는<br>
                 모든 분들께 특별한 최고심<br>

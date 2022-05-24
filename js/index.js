@@ -9,7 +9,14 @@ var section1 = {
     },
 
     scroll_detector:function(){
+        var rs_height = $(window).height();
+        var rs_width = $(window).width();
 
+        if (rs_height < 800 && rs_width < 1441) {
+            $('.scroll > p').hide();
+        } else {
+            $('.scroll > p').show();
+        }
         
 
         $(".section0").on('mousewheel',function(e){
@@ -355,13 +362,11 @@ var s3Slider = {
             ]
         
         }).on('afterChange', function(event, slick, currentSlide, nextSlide){ 
-            if (currentSlide == 2){
-                //$('.scroll').removeClass('off');
-                $('.slider_nav .next').removeClass('ylw');
-            } else {
-                //$('.scroll').removeClass('off');
-                $('.slider_nav .next').addClass('ylw');
-            }
+            // if (currentSlide == 2){
+            //     $('.slider_nav .next').removeClass('ylw');
+            // } else {
+            //     $('.slider_nav .next').addClass('ylw');
+            // }
             
 
         });
@@ -559,14 +564,7 @@ var fullpage = {
         })();
 
         $(window).resize(function () {
-            waitForFinalEvent(function(){
-                // var a_table = $('section').length;
-                // for (var i = 0; i < a_table; i++) {
-                //     $('.section' + i +'.active .aos-init').addClass('aos-animate'); // all magic goes here - when page is active, then all elements with AOS will start animate
-                // }
-
-
-            }, 500, "some unique string");
+            // do something
         });
 
     },
