@@ -196,6 +196,7 @@ var s5Slider = {
     init:function(){
         this.slider();
         this.hovEvent();
+        this.hovEvent_m();
         this.clickEvent();
     },
     slider:function(){
@@ -226,7 +227,7 @@ var s5Slider = {
             slidesToShow: 3,
             slidesToScroll: 1,
             autoplay: false,
-            // autoplaySpeed: 5000,
+            autoplaySpeed: 3000,
             initialSlide : 0,
             infinite: true,
             swipeToSlide: true,
@@ -265,6 +266,15 @@ var s5Slider = {
           $(".hov-anim").mouseout(function() {
             $(this).attr("src", $(this).data("static"))
           });
+          
+    },
+    hovEvent_m:function(){
+        $(".hov-anim_m").toggle(function(){
+            $(this).attr("src", $(this).data("animated"))
+        },function(){
+            $(this).attr("src", $(this).data("static"))
+        });
+
           
     },
     clickEvent:function(){
@@ -518,6 +528,15 @@ var fullpage = {
                 }
                 if ( index !== 2 ) {
                     $('.section3 .slider_wrap').slick('slickGoTo', 0);
+                    $('.section3 .slider_wrap').slick('slickPause');
+                } else { 
+                    $('.section3 .slider_wrap').slick("slickPlay")
+                }
+                if ( index !== 3 ) {
+                    $('.section5 .slider_wrap').slick('slickGoTo', 0);
+                    $('.section5 .slider_wrap').slick('slickPause');
+                } else { 
+                    $('.section5 .slider_wrap').slick("slickPlay")
                 }
 
             },
