@@ -48,11 +48,11 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 
 .section3 .slider_nav {width: 100%;max-width: 1440px;position: absolute;top: 45%;left: 50%;transform: translate(-50%,-50%); display: flex;justify-content: space-between;}
 .section3 .slider_nav > div {width: 70px;height: 70px;border-radius: 50%;cursor: pointer; border: 2px solid #fff; transition:background .1s ease; } 
-.section3 .slider_nav > .prev {background: url(../images/arrow_left.png) no-repeat 50% 50%;}
-.section3 .slider_nav > .next {background: url(../images/arrow_right.png) no-repeat 50% 50%;}
-/* .section3 .slider_nav > .next.ylw {background: #ffee62 url(../images/arrow_right_blue.png) no-repeat 50% 50%; border: 2px solid #ffee62;} */
-.section3 .slider_nav > .prev:hover {background: #ffee62 url(../images/arrow_left_blue.png) no-repeat 50% 50%;border: 0; border: 2px solid #ffee62;}
-.section3 .slider_nav > .next:hover {background: #ffee62 url(../images/arrow_right_blue.png) no-repeat 50% 50%;border: 0; border: 2px solid #ffee62;}
+.section3 .slider_nav > .prev {background: url(https://cdn.unicef.or.kr/images/100th/arrow_left.png) no-repeat 50% 50%;}
+.section3 .slider_nav > .next {background: url(https://cdn.unicef.or.kr/images/100th/arrow_right.png) no-repeat 50% 50%;}
+/* .section3 .slider_nav > .next.ylw {background: #ffee62 url(https://cdn.unicef.or.kr/images/100th/arrow_right_blue.png) no-repeat 50% 50%; border: 2px solid #ffee62;} */
+.section3 .slider_nav > .prev:hover {background: #ffee62 url(https://cdn.unicef.or.kr/images/100th/arrow_left_blue.png) no-repeat 50% 50%;border: 0; border: 2px solid #ffee62;}
+.section3 .slider_nav > .next:hover {background: #ffee62 url(https://cdn.unicef.or.kr/images/100th/arrow_right_blue.png) no-repeat 50% 50%;border: 0; border: 2px solid #ffee62;}
 
 @media screen and (max-width:1280px){
 	.section3 .fp-scrollable { height: 100%; }
@@ -113,24 +113,24 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 .section5 .slider_wrap .slick-slide {margin: 0 7px;}
 
 .section5 .slider_wrap .item {width: 366px;height: 486px;position: relative;box-sizing: border-box;}
-.section5 .slider_wrap .item01 {background: url(../images/s5_card01.png) no-repeat 0 0;background-size: contain;}
-.section5 .slider_wrap .item03 {background: url(../images/s5_card03.png) no-repeat 0 0;background-size: contain;}
-.section5 .slider_wrap .item05 {background: url(../images/s5_card05.png) no-repeat 0 0;background-size: contain;}
-.section5 .slider_wrap .item02 {background: url(../images/s5_card02.png) no-repeat 0 0;background-size: contain;}
-.section5 .slider_wrap .item04 {background: url(../images/s5_card04.png) no-repeat 0 0;background-size: contain;}
-.section5 .slider_wrap .item06 {background: url(../images/s5_card06.png) no-repeat 0 0;background-size: contain;}
-.section5 .slider_wrap .item07 {background: url(../images/s5_card07.png) no-repeat 0 0;background-size: contain;}
-.section5 .slider_wrap .item08 {background: url(../images/s5_card08.png) no-repeat 0 0;background-size: contain;}
+.section5 .slider_wrap .item01 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card01.png) no-repeat 0 0;background-size: contain;}
+.section5 .slider_wrap .item03 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card03.png) no-repeat 0 0;background-size: contain;}
+.section5 .slider_wrap .item05 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card05.png) no-repeat 0 0;background-size: contain;}
+.section5 .slider_wrap .item02 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card02.png) no-repeat 0 0;background-size: contain;}
+.section5 .slider_wrap .item04 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card04.png) no-repeat 0 0;background-size: contain;}
+.section5 .slider_wrap .item06 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card06.png) no-repeat 0 0;background-size: contain;}
+.section5 .slider_wrap .item07 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card07.png) no-repeat 0 0;background-size: contain;}
+.section5 .slider_wrap .item08 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card08.png) no-repeat 0 0;background-size: contain;}
 .section5 .slider_wrap .item > .card_emot {position: absolute;top: 45px;left: 46px;}
 .section5 .slider_wrap .item > .card_emot:last-of-type {display: none;}
 .section5 .slider_wrap .item > .card_btn {display: block;width: 275px;height: 50px;position: absolute;bottom: 71px;left: 42px;box-sizing: border-box;}
 
 .section5 .slider_nav {position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);display: flex;max-width: 1440px;width: 100%;justify-content: space-between;}
 .section5 .slider_nav > div {width: 70px;height: 70px;border-radius: 50%;background: transparent;border: 2px solid #fff;cursor: pointer;box-sizing: border-box; transition:background .1s ease;}
-.section5 .slider_nav > .prev {background: url(../images/arrow_left.png) no-repeat 50% 50%;background-size: 15px 27px;}
-.section5 .slider_nav > .next {background: url(../images/arrow_right.png) no-repeat 50% 50%;background-size: 15px 27px;}
-.section5 .slider_nav > .prev.on, .section5 .slider_nav > .prev:hover {background: #ffee62 url(../images/arrow_left_blue.png) no-repeat 50% 50%; border: 0;}
-.section5 .slider_nav > .next.on, .section5 .slider_nav > .next:hover {background: #ffee62 url(../images/arrow_right_blue.png) no-repeat 50% 50%; border: 0;}
+.section5 .slider_nav > .prev {background: url(https://cdn.unicef.or.kr/images/100th/arrow_left.png) no-repeat 50% 50%;background-size: 15px 27px;}
+.section5 .slider_nav > .next {background: url(https://cdn.unicef.or.kr/images/100th/arrow_right.png) no-repeat 50% 50%;background-size: 15px 27px;}
+.section5 .slider_nav > .prev.on, .section5 .slider_nav > .prev:hover {background: #ffee62 url(https://cdn.unicef.or.kr/images/100th/arrow_left_blue.png) no-repeat 50% 50%; border: 0;}
+.section5 .slider_nav > .next.on, .section5 .slider_nav > .next:hover {background: #ffee62 url(https://cdn.unicef.or.kr/images/100th/arrow_right_blue.png) no-repeat 50% 50%; border: 0;}
 .section5 .progress {
 	display: block;
 	width: calc(100% - 350px);
@@ -177,14 +177,14 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 	.section5 .slider_wrap .slick-slide {margin: 0;}
 	
 	.section5 .slider_wrap .item {width: 244px;height: 327px;}
-	.section5 .slider_wrap .item01 {background: url(../images/s5_card01_m.png) no-repeat 0 0;background-size: contain;}
-	.section5 .slider_wrap .item03 {background: url(../images/s5_card03_m.png) no-repeat 0 0;background-size: contain;}
-	.section5 .slider_wrap .item05 {background: url(../images/s5_card05_m.png) no-repeat 0 0;background-size: contain;}
-	.section5 .slider_wrap .item02 {background: url(../images/s5_card02_m.png) no-repeat 0 0;background-size: contain;}
-	.section5 .slider_wrap .item04 {background: url(../images/s5_card04_m.png) no-repeat 0 0;background-size: contain;}
-	.section5 .slider_wrap .item06 {background: url(../images/s5_card06_m.png) no-repeat 0 0;background-size: contain;}
-	.section5 .slider_wrap .item07 {background: url(../images/s5_card07_m.png) no-repeat 0 0;background-size: contain;}
-	.section5 .slider_wrap .item08 {background: url(../images/s5_card08_m.png) no-repeat 0 0;background-size: contain;}
+	.section5 .slider_wrap .item01 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card01_m.png) no-repeat 0 0;background-size: contain;}
+	.section5 .slider_wrap .item03 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card03_m.png) no-repeat 0 0;background-size: contain;}
+	.section5 .slider_wrap .item05 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card05_m.png) no-repeat 0 0;background-size: contain;}
+	.section5 .slider_wrap .item02 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card02_m.png) no-repeat 0 0;background-size: contain;}
+	.section5 .slider_wrap .item04 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card04_m.png) no-repeat 0 0;background-size: contain;}
+	.section5 .slider_wrap .item06 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card06_m.png) no-repeat 0 0;background-size: contain;}
+	.section5 .slider_wrap .item07 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card07_m.png) no-repeat 0 0;background-size: contain;}
+	.section5 .slider_wrap .item08 {background: url(https://cdn.unicef.or.kr/images/100th/s5_card08_m.png) no-repeat 0 0;background-size: contain;}
 	.section5 .slider_wrap .item > .card_emot {top: 35px;left: 50%;transform: translateX(-50%);}
 	.section5 .slider_wrap .item > .card_emot:first-of-type {display: none;}
 	.section5 .slider_wrap .item > .card_emot:last-of-type {display: block;width: 180px;}
@@ -195,10 +195,10 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 	.section5 .progress {display: none;}
 
 	.section5 .slider_nav > div {width: 40px;height: 40px;border: 1px solid #fff;}
-	.section5 .slider_nav > .prev {background: url(../images/arrow_left.png) no-repeat 50% 50%;background-size: 10px 18px;}
-	.section5 .slider_nav > .next {background: url(../images/arrow_right.png) no-repeat 50% 50%;background-size: 10px 18px;}
-	.section5 .slider_nav > .prev.on, .section5 .slider_nav > .prev:hover {background: #ffee62 url(../images/arrow_left_blue.png) no-repeat 50% 50%;border: 0;background-size: 10px 18px;}
-	.section5 .slider_nav > .next.on, .section5 .slider_nav > .next:hover {background: #ffee62 url(../images/arrow_right_blue.png) no-repeat 50% 50%;border: 0;background-size: 10px 18px;}
+	.section5 .slider_nav > .prev {background: url(https://cdn.unicef.or.kr/images/100th/arrow_left.png) no-repeat 50% 50%;background-size: 10px 18px;}
+	.section5 .slider_nav > .next {background: url(https://cdn.unicef.or.kr/images/100th/arrow_right.png) no-repeat 50% 50%;background-size: 10px 18px;}
+	.section5 .slider_nav > .prev.on, .section5 .slider_nav > .prev:hover {background: #ffee62 url(https://cdn.unicef.or.kr/images/100th/arrow_left_blue.png) no-repeat 50% 50%;border: 0;background-size: 10px 18px;}
+	.section5 .slider_nav > .next.on, .section5 .slider_nav > .next:hover {background: #ffee62 url(https://cdn.unicef.or.kr/images/100th/arrow_right_blue.png) no-repeat 50% 50%;border: 0;background-size: 10px 18px;}
 
 	.section5 .btn_pdf {font-size: 12px; }
 
@@ -258,7 +258,7 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 .section6 .cont > div {display: flex;}
 .section6 .cont > div:first-child {margin-bottom: 39px;}
 .section6 .cont_tit {flex-shrink: 0; font-size: 20px;color: #2589c9;font-weight: 300;margin-right: 30px; text-align: left;letter-spacing: -.5px;}
-.section6 .cont_tit:before {content:url(../images/s7_heart.png);}
+.section6 .cont_tit:before {content:url(https://cdn.unicef.or.kr/images/100th/s7_heart.png);}
 .section6 .cont ul {display: flex;justify-content: space-between;}
 .section6 .cont ul li:first-child {margin-right: 100px;}
 .section6 .cont ul li .top {display: flex;text-align: left;align-items: center;}
@@ -310,7 +310,7 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 
 }
 
-.section7 { background: url(../images/s6_bg.png);}
+.section7 { background: url(https://cdn.unicef.or.kr/images/100th/s6_bg.png);}
 .section7 .center {display: flex;flex-direction: column; align-items: center;justify-content: center;height: 100%; padding:50px 0 0;}
 .section7 .inner {width: 100%;max-width: 1200px;box-sizing: border-box; }
 .section7 h1.s_tit {font-size: 60px;font-weight: 300;color: #2589c9;margin-bottom: 27px;}
@@ -344,7 +344,7 @@ body, html {font-family: 'GongGothic'; font-weight: 100; color:#000;box-sizing: 
 
 .section7 .cont .cont_tit {text-align: center;font-size: 24px;font-weight: 300;color: #2589c9;letter-spacing: -.55px;}
 .section7 .cont .cont_tit:before,
-.section7 .cont .cont_tit:after {content: url(../images/s7_heart.png);}
+.section7 .cont .cont_tit:after {content: url(https://cdn.unicef.or.kr/images/100th/s7_heart.png);}
 .section7 .cont .cont_tit:before {margin-right: 14px; }
 .section7 .cont .cont_tit:after {margin-left: 14px;}
 .section7 .cont .left {}

@@ -8,7 +8,7 @@ body { width:100%; background: #2589c9; }
 .scroll p { padding-bottom: 10px; font-family: 'Noto Sans KR'; font-weight: 300; font-size: 14px; }
 .scroll i { border: 2px solid #000; border-radius: 50px; width: 29px; height: 52px; display: block; position: relative; margin:auto; }
 .scroll i:after { content: ''; width: 4px; height: 12px; background: #000; border-radius: 50px; position: absolute; top: 10px; left: 0; right: 0; margin: auto; animation: scroll 2s infinite; }
-.scroll i:before { content:url(../images/scrollDown_arrow.png); position:absolute; bottom: -28px; left:calc(50% - 1px); transform:translateX(-50%); animation:scroll_arrow .7s infinite alternate}
+.scroll i:before { content:url(https://cdn.unicef.or.kr/images/100th/scrollDown_arrow.png); position:absolute; bottom: -28px; left:calc(50% - 1px); transform:translateX(-50%); animation:scroll_arrow .7s infinite alternate}
 
 /* ani */
 @keyframes scroll_mob {
@@ -60,7 +60,7 @@ body { width:100%; background: #2589c9; }
     .scroll p { display: none; }
     .scroll i { border: none; width: 9px; height: 9px; }
     .scroll i:after { display: none; }
-    .scroll i:before { content:url(../images/scrollDown_arrow.png); position:absolute; bottom: -28px; left:calc(50% - 1px); transform:translateX(-50%); animation:scroll_arrow .7s infinite alternate; }
+    .scroll i:before { content:url(https://cdn.unicef.or.kr/images/100th/scrollDown_arrow.png); position:absolute; bottom: -28px; left:calc(50% - 1px); transform:translateX(-50%); animation:scroll_arrow .7s infinite alternate; }
 
     .section0 .section_wrap { height: auto; top:132px; /* padding: 0 20px; */ width: calc(100% - 40px); }
     .section0 .section_wrap .scene0 {max-width: 340px;}
@@ -85,7 +85,7 @@ body { width:100%; background: #2589c9; }
 
 /* scene1 */
 .section2 .section_wrap .scene1 { width:100%; height: 100%; display: flex; justify-content: center; align-items: center; } 
-.section2 .section_wrap .scene1_bg { height: 100vh; width: 100%; background: url(../images/s1_bg.png) 50% 50% no-repeat; background-size: cover; position:fixed; top:0; } 
+.section2 .section_wrap .scene1_bg { height: 100vh; width: 100%; background: url(https://cdn.unicef.or.kr/images/100th/s1_bg.png) 50% 50% no-repeat; background-size: cover; position:fixed; top:0; } 
 .section2 .section_wrap .scene1 .fourth_quote { font-size: 60px; font-weight: 400; margin:auto; color: #fff; -webkit-text-stroke: #000 3px; width: fit-content; letter-spacing: -3px; }
 .section2 .section_wrap .scene1 .fourth_quote span:nth-of-type(1) { color: #ffee62; }
 .section2 .section_wrap .scene1 .fifth_quote { font-size: 60px; font-weight: 400; margin:auto; color: #fff; -webkit-text-stroke: #000 3px; width: fit-content; letter-spacing: -3px; }
